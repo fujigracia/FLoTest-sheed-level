@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FloTest - Lembar Ujian</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body class="dashboard-layout">
+    <aside class="sidebar">
+        <div class="sidebar-brand">
+            <h2>🎓 Panel Menti</h2>
+        </div>
+        <nav class="sidebar-menu">
+            <ul>
+                <li><a href="dashboard.html">🏠 Dashboard</a></li>
+                <li><a href="take-test.html" class="active">✍️ Ujian Masuk</a></li>
+                <li><a href="result.html">📊 Riwayat Hasil</a></li>
+                <li class="menu-separator"></li>
+                <li><a href="../index.html" class="logout-link">🚪 Keluar</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <div class="main-wrapper">
+        <header class="main-header"></header>
+
+        <main class="content-body">
+            <h2>📝 Lembar Soal Ujian</h2>
+            <a href="dashboard.html" class="back-dashboard-btn">&larr; Kembali ke Dashboard</a>
+
+            <article class="test-sheet-box">
+                <div class="test-sheet-header">
+                    <h3>Nama Tes: HTML Basic Test</h3>
+                    <span class="badge-count">Soal 1 dari 10</span>
+                </div>
+                
+                <form action="result.html" method="GET">
+                    <p class="question-text">
+                        <strong>Pertanyaan:</strong> Apa fungsi HTML?
+                    </p>
+                    
+                    <div class="radio-options-group">
+                        <label class="option-item">
+                            <input type="radio" name="q1" value="A"> 
+                            <span class="option-text"><strong>A.</strong> HyperText Markup Language (Menyusun Struktur Halaman Web)</span>
+                        </label>
+                        <label class="option-item">
+                            <input type="radio" name="q1" value="B"> 
+                            <span class="option-text"><strong>B.</strong> HyperText Markdown Language (Membuat File Catatan Berbasis Teks)</span>
+                        </label>
+                        <label class="option-item">
+                            <input type="radio" name="q1" value="C"> 
+                            <span class="option-text"><strong>C.</strong> HighText Machine Language (Bahasa Instruksi Pemrograman Mesin)</span>
+                        </label>
+                        <label class="option-item">
+                            <input type="radio" name="q1" value="D"> 
+                            <span class="option-text"><strong>D.</strong> Home Tool Markup Language (Mengatur Desain Grafis Perangkat Lunak)</span>
+                        </label>
+                    </div>
+
+                    <div class="test-form-footer">
+                        <div class="nav-button-group">
+                            <button type="button" disabled class="btn btn-secondary btn-disabled">◀ Sebelumnya</button>
+                            <button type="button" class="btn btn-secondary">Selanjutnya ▶</button>
+                        </div>
+                        <button type="submit" class="btn btn-submit-test">🚀 Selesai & Kirim</button>
+                    </div>
+                </form>
+            </article>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 FloTest - FUJI </p>
+        </footer>
+    </div>
+</body>
+</html>

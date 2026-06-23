@@ -1,12 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <title>FloTest - Edit Soal</title>
+    <link rel="stylesheet" href="../../../assets/css/style.css">
 </head>
-<body>
-    
+<body class="dashboard-layout">
+
+    <aside class="sidebar">
+        <div class="sidebar-brand">
+            <h2>⚡ Panel Admin</h2>
+        </div>
+        <nav class="sidebar-menu">
+            <ul>
+                <li><a href="../../dashboard.html">🏠 Dashboard Admin</a></li>
+                <li><a href="../../user/index.html">👥 Menu Users</a></li>
+                <li><a href="../index.html" class="active">📂 Menu Tests</a></li>
+                <li class="menu-separator"></li>
+                <li><a href="../../../index.html" class="logout-link">🚪 Keluar</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <div class="main-wrapper">
+        <header class="main-header">
+            <div class="user-profile">
+                <span>Otoritas: <strong>Master Admin</strong> 👑</span>
+            </div>
+        </header>
+
+        <main class="content-body">
+            <section class="welcome-banner" style="border-left: 5px solid var(--warning);">
+                <h2>✏️ Modifikasi Butir Pertanyaan</h2>
+                <p>Ubah muatan materi redaksi soal kuis atau perbarui penetapan opsi pilihan kunci jawaban yang benar.</p>
+                <a href="index.html" class="back-dashboard-btn" style="margin-bottom: 0;">&larr; Kembali ke Daftar Soal</a>
+            </section>
+
+            <section class="form-container-box">
+                <form action="#" onsubmit="event.preventDefault(); alert('Pertanyaan kuis berhasil diperbarui!'); window.location.href='index.html';">
+                    <div class="form-group">
+                        <label>Teks Pertanyaan (Question Text)</label>
+                        <input type="text" value="Tag HTML manakah yang digunakan secara khusus untuk membuat hyperlink?" placeholder="Ketik pertanyaan..." required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Pilihan Opsi A</label>
+                        <input type="text" value="<link>" placeholder="Opsi A" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Pilihan Opsi B</label>
+                        <input type="text" value="<a>" placeholder="Opsi B" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Pilihan Opsi C</label>
+                        <input type="text" value="<href>" placeholder="Opsi C" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Pilihan Opsi D</label>
+                        <input type="text" value="<url>" placeholder="Opsi D" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Jawaban Kunci Benar</label>
+                        <select required>
+                            <option value="A">Opsi A</option>
+                            <option value="B" selected>Opsi B</option>
+                            <option value="C">Opsi C</option>
+                            <option value="D">Opsi D</option>
+                        </select>
+                    </div>
+
+                    <div class="form-button-group">
+                        <button type="submit" class="btn" style="width: 100%; background-color: var(--warning);">💾 Perbarui Pertanyaan</button>
+                    </div>
+                </form>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 FloTest - FUJI </p>
+        </footer>
+    </div>
 </body>
 </html>

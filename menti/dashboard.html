@@ -7,15 +7,17 @@
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body class="dashboard-layout">
-    <aside class="sidebar">
+
+    <input type="radio" name="menti-tabs" id="tab-dashboard" class="tab-switch" checked>
+    <input type="radio" name="menti-tabs" id="tab-tes" class="tab-switch">       <input type="radio" name="menti-tabs" id="tab-mentor" class="tab-switch">    <aside class="sidebar">
         <div class="sidebar-brand">
-            <h2>🎓 Panel Menti</h2>
+            <h2>⚡ Panel Menti</h2>
         </div>
         <nav class="sidebar-menu">
             <ul>
-                <li><a href="dashboard.html" class="active">🏠 Dashboard</a></li>
-                <li><a href="take-test.html">✍️ Ujian Masuk</a></li>
-                <li><a href="result.html">📊 Riwayat Hasil</a></li>
+                <li><label for="tab-dashboard">🏠 Dashboard Menti</label></li>
+                <li><label for="tab-tes">📝 Menu Take Test</label></li>
+                <li><label for="tab-mentor">📊 Menu View Results</label></li>
                 <li class="menu-separator"></li>
                 <li><a href="../index.html" class="logout-link">🚪 Keluar</a></li>
             </ul>
@@ -25,49 +27,153 @@
     <div class="main-wrapper">
         <header class="main-header">
             <div class="user-profile">
-                <span>Akun Siswa: <strong>Menti Student</strong> 🎓</span>
+                <span>Selamat Belajar, <strong>Siswa Menti</strong> 🎓</span>
             </div>
         </header>
 
         <main class="content-body">
-            <section class="welcome-banner welcome-menti">
-                <h2 class="welcome-menti-title">Halo Menti, Tetap Semangat!</h2>
-                <p class="welcome-menti-desc">Pantau hasil nilai latihan kelas atau kerjakan ujian baru yang ditugaskan oleh mentor kamu.</p>
-            </section>
-            
-            <section class="stats-container">
-                <article class="card card-menti-1">
-                    <div class="card-icon">🔥</div>
-                    <div class="card-info">
-                        <h3>Tes Tersedia</h3>
-                        <p class="stat-number">1</p>
-                        <span class="stat-desc">Harus dikerjakan</span>
-                    </div>
-                </article>
-                <article class="card card-menti-2">
-                    <div class="card-icon">✅</div>
-                    <div class="card-info">
-                        <h3>Tes Selesai</h3>
-                        <p class="stat-number">1</p>
-                        <span class="stat-desc">Evaluasi nilai siap</span>
-                    </div>
-                </article>
-            </section>
 
-            <section class="quick-action-box quick-action-menti">
-                <h3>🎯 Sesi Ujian Online</h3>
-                <p>Pastikan koneksi internet kamu stabil sebelum menekan tombol pengerjaan lembar ujian di bawah.</p>
-                
-                <div class="menti-action-buttons">
-                    <a href="take-test.html" class="btn btn-start-test">🚀 Mulai Kerjakan Tes</a>
-                    <a href="result.html" class="btn btn-secondary btn-view-result">📊 Lihat Lembar Hasil</a>
+            <div id="content-dashboard" class="tab-content-section">
+                <section class="welcome-banner" style="border-left: 5px solid #3b82f6;">
+                    <h2>Selamat Datang di Ruang Ujian FloTest!</h2>
+                    <p>Pantau perkembangan belajarmu secara berkala. Periksa daftar ujian baru yang tersedia atau lihat kembali skor evaluasi yang telah kamu selesaikan.</p>
+                </section>
+
+                <section class="stats-container">
+                    <article class="card">
+                        <div class="card-icon" style="color: #3b82f6;">📝</div>
+                        <div class="card-info">
+                            <h3>Available Tests</h3>
+                            <p class="stat-number">2</p>
+                            <span class="stat-desc">Ujian aktif siap dikerjakan</span>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="card-icon" style="color: #16a34a;">✅</div>
+                        <div class="card-info">
+                            <h3>Completed Tests</h3>
+                            <p class="stat-number">2</p>
+                            <span class="stat-desc">Evaluasi kuis diselesaikan</span>
+                        </div>
+                    </article>
+                </section>
+
+                <section class="quick-action-box" style="margin-top: 2rem;">
+                    <h3>⚡ Mulai Belajar Sekarang</h3>
+                    <p>Persiapkan diri dengan baik sebelum memulai ujian. Klik tombol di bawah untuk langsung menuju daftar soal.</p>
+                    <div class="quick-action-actions">
+                        <label for="tab-tes" class="btn" style="cursor: pointer; background-color: #3b82f6;">Lihat Ujian Tersedia</label>
+                        <label for="tab-mentor" class="btn btn-secondary" style="cursor: pointer;">Tinjau Nilai Rapor</label>
+                    </div>
+                </section>
+            </div>
+
+            <div id="content-tes" class="tab-content-section">
+                <section class="welcome-banner">
+                    <h2>Daftar Ujian yang Tersedia (Take Test)</h2>
+                    <p>Pilih topik kuis yang ingin kamu kerjakan hari ini. Pastikan koneksi internet stabil sebelum menekan tombol mulai.</p>
+                    <label for="tab-dashboard" class="back-dashboard-btn" style="cursor: pointer;">&larr; Kembali ke Dashboard</label>
+                </section>
+
+                <div class="info-section">
+                    <div class="page-title-section">
+                        <h3>📋 Daftar Ujian Aktif</h3>
+                        <span class="badge-count" style="background-color: #3b82f6;">2 Tersedia</span>
+                    </div>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Judul Ujian</th>
+                                    <th>Mentor Pembuat</th>
+                                    <th>Jumlah Soal</th>
+                                    <th style="text-align: center;">Aksi</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="test-title-cell">Pemrograman HTML & CSS Dasar</td>
+                                    <td>Ahmad Mentor</td>
+                                    <td>10 Soal</td>
+                                    <td style="text-align: center;">
+                                        <a href="take-test.html" class="btn" style="padding: 6px 14px; font-size: 0.8rem; background-color: #16a34a; text-decoration: none; display: inline-block;">✍️ Kerjakan Kuis</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="test-title-cell">Responsive Web Design Mobile First</td>
+                                    <td>Siti Mentor</td>
+                                    <td>8 Soal</td>
+                                    <td style="text-align: center;">
+                                        <a href="take-test.html" class="btn" style="padding: 6px 14px; font-size: 0.8rem; background-color: #16a34a; text-decoration: none; display: inline-block;">✍️ Kerjakan Kuis</a>
+                                    </td>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
-            </section>
+            </div>
+
+            <div id="content-mentor" class="tab-content-section">
+                <section class="welcome-banner">
+                    <h2>Riwayat Hasil Nilai Ujian Kamu (View Results)</h2>
+                    <p>Berikut adalah lembar pencapaian serta hasil evaluasi nilai dari tes yang sudah kamu lalui sebelumnya.</p>
+                    <label for="tab-dashboard" class="back-dashboard-btn" style="cursor: pointer;">&larr; Kembali ke Dashboard</label>
+                </section>
+
+                <div class="info-section">
+                    <div class="page-title-section">
+                        <h3>📊 Rekam Jejak Prestasi</h3>
+                        <span class="badge-count" style="background-color: #ebf2ed;">4 Selesai</span>
+                    </div>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Judul Ujian</th>
+                                    <th>Tanggal Selesai</th>
+                                    <th>Nilai Akhir</th>
+                                    <th>Status Kelulusan</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="test-title-cell">Logika JavaScript Dasar</td>
+                                    <td>20 Juni 2026</td>
+                                    <td><a href="result.html" style="color: #4f46e5; font-weight: bold; text-decoration: underline;">90 / 100 (Lihat Detail)</a></td>
+                                    <td><span class="status published" style="background: #f0fdf4; color: #16a34a;">Lulus</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="test-title-cell">Pengenalan Dasar CSS Grid</td>
+                                    <td>18 Juni 2026</td>
+                                    <td><a href="result.html" style="color: #4f46e5; font-weight: bold; text-decoration: underline;">85 / 100 (Lihat Detail)</a></td>
+                                    <td><span class="status published" style="background: #f0fdf4; color: #16a34a;">Lulus</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="test-title-cell">Struktur Fondasi Dokumen HTML</td>
+                                    <td>15 Juni 2026</td>
+                                    <td><a href="result.html" style="color: #4f46e5; font-weight: bold; text-decoration: underline;">100 / 100 (Lihat Detail)</a></td>
+                                    <td><span class="status published" style="background: #f0fdf4; color: #16a34a;">Sempurna</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="test-title-cell">Konsep Git & GitHub Repository</td>
+                                    <td>10 Juni 2026</td>
+                                    <td><a href="result.html" style="color: #4f46e5; font-weight: bold; text-decoration: underline;">50 / 100 (Lihat Detail)</a></td>
+                                    <td><span class="status archived" style="background: #fef2f2; color: #ef4444;">Gagal</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
         </main>
 
         <footer>
-            <p>&copy; 2026 FloTest - FUJI </p>
+            <p>&copy; 2026 FloTest - FUJI</p>
         </footer>
     </div>
+
+    <script src="../assets/js/main.js"></script>
 </body>
 </html>

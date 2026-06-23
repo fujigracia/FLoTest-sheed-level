@@ -1,12 +1,101 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <title>FloTest - Bank Soal Ujian</title>
+    <link rel="stylesheet" href="../../../assets/css/style.css">
 </head>
-<body>
-    
+<body class="dashboard-layout">
+
+    <aside class="sidebar">
+        <div class="sidebar-brand">
+            <h2>⚡ Panel Admin</h2>
+        </div>
+        <nav class="sidebar-menu">
+            <ul>
+                <li><a href="../../dashboard.html">🏠 Dashboard Admin</a></li>
+                <li><a href="../../user/index.html">👥 Menu Users</a></li>
+                <li><a href="../index.html" class="active">📂 Menu Tests</a></li>
+                <li class="menu-separator"></li>
+                <li><a href="../../../index.html" class="logout-link">🚪 Keluar</a></li>
+            </ul>   
+        </nav>
+    </aside>
+
+    <div class="main-wrapper">
+        <header class="main-header">
+            <div class="user-profile">
+                <span>Otoritas: <strong>Master Admin</strong> 👑</span>
+            </div>
+        </header>
+
+        <main class="content-body">
+            <section class="welcome-banner">
+                <h2>Bank Soal: HTML Basic Ujian Utama</h2>
+                <p>Mengelola rincian butir pertanyaan, pilihan opsi jawaban, beserta kunci penilaian ujian kuis.</p>
+                <a href="../index.html" class="back-dashboard-btn" style="margin-bottom: 0;">&larr; Kembali ke Daftar Paket Ujian (Tests)</a>
+            </section>
+
+            <div class="info-section">
+                <div class="page-title-section">
+                    <h3>📋 Daftar Soal (HTML Basic)</h3>
+                    <a href="create.html" class="btn">➕ Tambah Soal Baru</a>
+                </div>
+                
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th style="width: 80px; text-align: center;">Number</th>
+                                <th>Question Text</th>
+                                <th style="width: 150px;">Type</th>
+                                <th style="width: 200px; text-align: center;">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="text-align: center;"><strong>1</strong></td>
+                                <td class="test-title-cell">Tag HTML manakah yang digunakan secara khusus untuk membuat hyperlink?</td>
+                                <td><span class="status published" style="background: #f0fdf4; color: #16a34a;">Pilihan Ganda</span></td>
+                                <td style="text-align: center;">
+                                    <div style="display: flex; gap: 8px; justify-content: center;">
+                                        <a href="edit.html" class="btn btn-secondary" style="padding: 6px 12px; font-size: 0.8rem;">✏️ Edit</a>
+                                        <button onclick="alert('Pertanyaan kuis berhasil dihapus!')" class="btn" style="padding: 6px 12px; font-size: 0.8rem; background-color: var(--danger);">🗑️ Delete</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: center;"><strong>2</strong></td>
+                                <td class="test-title-cell">Elemen HTML yang berfungsi untuk mendefinisikan konten baris utama paling atas adalah...</td>
+                                <td><span class="status published" style="background: #f0fdf4; color: #16a34a;">Pilihan Ganda</span></td>
+                                <td style="text-align: center;">
+                                    <div style="display: flex; gap: 8px; justify-content: center;">
+                                        <a href="edit.html" class="btn btn-secondary" style="padding: 6px 12px; font-size: 0.8rem;">✏️ Edit</a>
+                                        <button onclick="alert('Pertanyaan kuis berhasil dihapus!')" class="btn" style="padding: 6px 12px; font-size: 0.8rem; background-color: var(--danger);">🗑️ Delete</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: center;"><strong>3</strong></td>
+                                <td class="test-title-cell">Karakter manakah yang digunakan untuk mengindikasikan tag penutup di HTML?</td>
+                                <td><span class="status published" style="background: #f0fdf4; color: #16a34a;">Pilihan Ganda</span></td>
+                                <td style="text-align: center;">
+                                    <div style="display: flex; gap: 8px; justify-content: center;">
+                                        <a href="edit.html" class="btn btn-secondary" style="padding: 6px 12px; font-size: 0.8rem;">✏️ Edit</a>
+                                        <button onclick="alert('Pertanyaan kuis berhasil dihapus!')" class="btn" style="padding: 6px 12px; font-size: 0.8rem; background-color: var(--danger);">🗑️ Delete</button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 FloTest - FUJI </p>
+        </footer>
+    </div>
 </body>
 </html>

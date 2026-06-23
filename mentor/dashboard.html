@@ -7,15 +7,17 @@
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body class="dashboard-layout">
-    <aside class="sidebar">
+
+    <input type="radio" name="mentor-tabs" id="tab-dashboard" class="tab-switch" checked>
+    <input type="radio" name="mentor-tabs" id="tab-tes" class="tab-switch">       <input type="radio" name="mentor-tabs" id="tab-mentor" class="tab-switch">    <aside class="sidebar">
         <div class="sidebar-brand">
-            <h2>👨‍🏫 Ruang Mentor</h2>
+            <h2>⚡ Panel Mentor</h2>
         </div>
         <nav class="sidebar-menu">
             <ul>
-                <li><a href="dashboard.html" class="active">🏠 Dashboard</a></li>
-                <li><a href="tests.html">📂 Daftar Tes</a></li>
-                <li><a href="create-test.html">➕ Buat Tes Baru</a></li>
+                <li><label for="tab-dashboard">🏠 Dashboard Mentor</label></li>
+                <li><a href="tests/index.html" style="color: #94a3b8; padding: 12px 16px; display: block; text-decoration: none;">📂 Menu Tests</a></li>
+                <li><label for="tab-mentor">➕ Menu Create Test</label></li>
                 <li class="menu-separator"></li>
                 <li><a href="../index.html" class="logout-link">🚪 Keluar</a></li>
             </ul>
@@ -25,48 +27,121 @@
     <div class="main-wrapper">
         <header class="main-header">
             <div class="user-profile">
-                <span>Selamat Datang, <strong>Mentor Utama</strong> 👋</span>
+                <span>Selamat Datang, <strong>Ahmad Mentor</strong> 👨‍🏫</span>
             </div>
         </header>
 
         <main class="content-body">
-            <section class="welcome-banner welcome-mentor">
-                <h2 class="welcome-mentor-title">Halo, Mentor!</h2>
-                <p class="welcome-mentor-desc">Kelola materi ujian, pantau status draf, dan buat soal evaluasi baru untuk menti Anda.</p>
-            </section>
-            
-            <section class="stats-container">
-                <article class="card card-mentor-1">
-                    <div class="card-icon">📁</div>
-                    <div class="card-info">
-                        <h3>Jumlah Tes Anda</h3>
-                        <p class="stat-number">3</p>
-                        <span class="stat-desc">Paket ujian dibuat</span>
-                    </div>
-                </article>
-                <article class="card card-mentor-2">
-                    <div class="card-icon">❓</div>
-                    <div class="card-info">
-                        <h3>Total Soal Dibuat</h3>
-                        <p class="stat-number">33</p>
-                        <span class="stat-desc">Pertanyaan pilihan ganda</span>
-                    </div>
-                </article>
-            </section>
 
-            <section class="quick-action-box">
-                <h3>⚡ Akses Cepat Menu</h3>
-                <p>Silakan klik tombol di bawah ini untuk mengelola ujian atau merancang materi soal baru.</p>
-                <div class="quick-action-actions">
-                    <a href="tests.html" class="btn">📋 Lihat Tabel Tes</a>
-                    <a href="create-test.html" class="btn btn-secondary">✍️ Buat Ujian Baru</a>
+            <div id="content-dashboard" class="tab-content-section">
+                <section class="welcome-banner" style="border-left: 5px solid var(--success);">
+                    <h2>Ringkasan Aktivitas Mentor</h2>
+                    <p>Selamat bekerja! Di panel ini Anda dapat memantau jumlah distribusi paket ujian beserta soal pilihan ganda yang telah Anda rilis.</p>
+                </section>
+
+                <section class="stats-container">
+                    <article class="card">
+                        <div class="card-icon">📂</div>
+                        <div class="card-info">
+                            <h3>Total Tests</h3>
+                            <p class="stat-number">2</p>
+                            <span class="stat-desc">Paket kuis Anda buat</span>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="card-icon">❓</div>
+                        <div class="card-info">
+                            <h3>Total Questions</h3>
+                            <p class="stat-number">15</p>
+                            <span class="stat-desc">Butir pertanyaan aktif</span>
+                        </div>
+                    </article>
+                </section>
+
+                <section class="quick-action-box" style="margin-top: 2rem;">
+                    <h3>⚡ Manajemen Instan</h3>
+                    <p>Butuh merilis materi evaluasi baru secepatnya? Gunakan tombol pintasan di bawah ini.</p>
+                    <div class="quick-action-actions">
+                        <label for="tab-mentor" class="btn" style="cursor: pointer;">Buat Soal Ujian Baru</label>
+                        <label for="tab-tes" class="btn btn-secondary" style="cursor: pointer;">Tinjau Daftar Ujian</label>
+                    </div>
+                </section>
+            </div>
+
+            <div id="content-tes" class="tab-content-section">
+                <section class="welcome-banner">
+                    <h2>Daftar Paket Kuis Anda (Tests)</h2>
+                    <p>Kelola lembar evaluasi siswa. Status draft berarti kuis belum didistribusikan ke halaman kuis Menti.</p>
+                    <label for="tab-dashboard" class="back-dashboard-btn" style="cursor: pointer;">&larr; Kembali ke Dashboard</label>
+                </section>
+
+                <div class="info-section">
+                    <div class="page-title-section">
+                        <h3>📋 Repositori Kuis Kontrol</h3>
+                        <span class="badge-count">3 Paket Tes</span>
+                    </div>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Judul Ujian</th>
+                                    <th>Jumlah Soal</th>
+                                    <th>Status Publikasi</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="test-title-cell">Pemrograman HTML & CSS Dasar</td>
+                                    <td>10 Soal</td>
+                                    <td><span class="status published">Published</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="test-title-cell">Algoritma Javascript Lanjutan</td>
+                                    <td>5 Soal</td>
+                                    <td><span class="status draft">Draft</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="test-title-cell">Responsive Web Design Mobile First</td>
+                                    <td>8 Soal</td>
+                                    <td><span class="status archived">Archived</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
-            </section>
+            </div>
+
+            <div id="content-mentor" class="tab-content-section">
+    <section class="welcome-banner" style="padding-bottom: 15px;">
+        <h2>➕ Buat Paket Ujian Baru</h2>
+        <p style="margin-bottom: 0;">Rancang pertanyaan evaluasi berbobot untuk menguji pemahaman akhir para siswa (Menti).</p>
+        <label for="tab-dashboard" class="back-dashboard-btn" style="cursor: pointer; margin-top: 10px;">&larr; Kembali ke Dashboard</label>
+    </section>
+
+    <section class="form-container-box">
+        <form action="#">
+            <div class="form-group">
+                <label>Judul Ujian Baru</label>
+                <input type="text" placeholder="Contoh: Kuis Dasar Manipulasi DOM JavaScript" required>
+            </div>
+            <div class="form-group">
+                <label>Pertanyaan Soal Pertama</label>
+                <textarea placeholder="Tulis rincian kalimat pertanyaan kuis di sini..." required></textarea>
+            </div>
+            <div class="form-button-group">
+                <button type="submit" class="btn" style="width: 100%;">💾 Simpan ke Daftar Tes</button>
+            </div>
+        </form>
+    </section>
+</div>
+
         </main>
 
         <footer>
-            <p>&copy; 2026 FloTest - FUJI </p>
+            <p>&copy; 2026 FloTest - FUJI</p>
         </footer>
     </div>
+
+    <script src="../assets/js/main.js"></script>
 </body>
 </html>

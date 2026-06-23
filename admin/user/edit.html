@@ -1,12 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <title>FloTest - Edit User</title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
 </head>
-<body>
-    
+<body class="dashboard-layout">
+
+    <aside class="sidebar">
+        <div class="sidebar-brand">
+            <h2>⚡ Panel Admin</h2>
+        </div>
+        <nav class="sidebar-menu">
+            <ul>
+                <li><a href="../dashboard.html">🏠 Dashboard Admin</a></li>
+                <li><a href="index.html" class="active">👥 Menu Users</a></li>
+                <li class="menu-separator"></li>
+                <li><a href="../../index.html" class="logout-link">🚪 Keluar</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <div class="main-wrapper">
+        <header class="main-header">
+            <div class="user-profile">
+                <span>Otoritas: <strong>Master Admin</strong> 👑</span>
+            </div>
+        </header>
+
+        <main class="content-body">
+            <section class="welcome-banner" style="border-left: 5px solid var(--warning);">
+                <h2>✏️ Ubah Informasi Pengguna</h2>
+                <p>Modifikasi kredensial atau peran akun yang dipilih sebelum memperbarui entri basis data.</p>
+                <a href="index.html" class="back-dashboard-btn" style="margin-bottom: 0;">&larr; Kembali ke Daftar Users</a>
+            </section>
+
+            <section class="form-container-box">
+                <form action="#" onsubmit="event.preventDefault(); alert('Data user berhasil diperbarui! (Dummy Action)'); window.location.href='index.html';">
+                    <div class="form-group">
+                        <label>Nama Lengkap Pengguna</label>
+                        <input type="text" value="Ahmad Mentor" placeholder="Masukkan nama..." required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Alamat Email Resmi</label>
+                        <input type="email" value="ahmad@flotest.com" placeholder="Masukkan email..." required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Hak Akses / Peran Akun</label>
+                        <select required>
+                            <option value="Admin">Admin</option>
+                            <option value="Mentor" selected>Mentor</option>
+                            <option value="Menti">Menti / Student</option>
+                        </select>
+                    </div>
+
+                    <div class="form-button-group">
+                        <button type="submit" class="btn" style="width: 100%; background-color: var(--warning);">💾 Perbarui Data Akun</button>
+                    </div>
+                </form>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 FloTest - FUJI </p>
+        </footer>
+    </div>
 </body>
 </html>

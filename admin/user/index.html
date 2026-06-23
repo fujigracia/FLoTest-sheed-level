@@ -1,12 +1,150 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <title>FloTest - Manajemen Pengguna</title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
 </head>
-<body>
-    
+<body class="dashboard-layout">
+
+    <aside class="sidebar">
+        <div class="sidebar-brand">
+            <h2>⚡ Panel Admin</h2>
+        </div>
+        <nav class="sidebar-menu">
+            <ul>
+                <li><a href="../dashboard.html">🏠 Dashboard Admin</a></li>
+                <li><a href="index.html" class="active">👥 Menu User</a></li>
+                <li class="menu-separator"></li>
+                <li><a href="../../index.html" class="logout-link">🚪 Keluar</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <div class="main-wrapper">
+        <header class="main-header">
+            <div class="user-profile">
+                <span>Otoritas: <strong>Master Admin</strong> 👑</span>
+            </div>
+        </header>
+
+        <main class="content-body">
+            <section class="welcome-banner">
+                <h2>Manajemen Data Pengguna (Users)</h2>
+                <p>Kelola hak akses akun, tambahkan mentor baru, atau bersihkan akun menti yang sudah tidak aktif.</p>
+                <a href="../dashboard.html" class="back-dashboard-btn" style="margin-bottom: 0;">&larr; Kembali ke Dashboard Admin</a>
+            </section>
+
+            <div class="info-section">
+                <div class="page-title-section">
+                    <h3>📋 Daftar Akun Terdaftar</h3>
+                    <a href="create.html" class="btn">➕ Tambah User Baru</a>
+                </div>
+                
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Nama Pengguna</th>
+                                <th>Email</th>
+                                <th>Peran (Role)</th>
+                                <th style="text-align: center;">Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="test-title-cell">Master Admin (Anda)</td>
+                                <td>admin@flotest.com</td>
+                                <td><span class="status draft" style="background: #e2e8f0; color: #1e293b;">Admin</span></td>
+                                <td style="text-align: center;">
+                                    <span class="btn-disabled" style="font-size: 0.85rem; color: var(--text-muted);">Utama</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="test-title-cell">Ahmad Mentor</td>
+                                <td>ahmad@flotest.com</td>
+                                <td><span class="status draft" style="background: #e0f2fe; color: #0369a1;">Mentor</span></td>
+                                <td style="text-align: center; display: flex; gap: 8px; justify-content: center;">
+                                    <a href="edit.html" class="btn btn-secondary" style="padding: 6px 12px; font-size: 0.8rem;">✏️ Edit</a>
+                                    <button onclick="alert('User berhasil dihapus! (Dummy Action)')" class="btn" style="padding: 6px 12px; font-size: 0.8rem; background-color: var(--danger);">🗑️ Delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="test-title-cell">Siti Mentor</td>
+                                <td>siti@flotest.com</td>
+                                <td><span class="status draft" style="background: #e0f2fe; color: #0369a1;">Mentor</span></td>
+                                <td style="text-align: center;">
+                                    <div style="display: flex; gap: 8px; justify-content: center;">
+                                        <a href="edit.html" class="btn btn-secondary" style="padding: 6px 12px; font-size: 0.8rem;">✏️ Edit</a>
+                                        <button onclick="alert('User berhasil dihapus! (Dummy Action)')" class="btn" style="padding: 6px 12px; font-size: 0.8rem; background-color: var(--danger);">🗑️ Delete</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="test-title-cell">Budi Menti Student</td>
+                                <td>budi@flotest.com</td>
+                                <td><span class="status published">Menti</span></td>
+                                <td style="text-align: center;">
+                                    <div style="display: flex; gap: 8px; justify-content: center;">
+                                        <a href="edit.html" class="btn btn-secondary" style="padding: 6px 12px; font-size: 0.8rem;">✏️ Edit</a>
+                                        <button onclick="alert('User berhasil dihapus! (Dummy Action)')" class="btn" style="padding: 6px 12px; font-size: 0.8rem; background-color: var(--danger);">🗑️ Delete</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="test-title-cell">Rian Menti</td>
+                                <td>rian@flotest.com</td>
+                                <td><span class="status published">Menti</span></td>
+                                <td style="text-align: center;">
+                                    <div style="display: flex; gap: 8px; justify-content: center;">
+                                        <a href="edit.html" class="btn btn-secondary" style="padding: 6px 12px; font-size: 0.8rem;">✏️ Edit</a>
+                                        <button onclick="alert('User berhasil dihapus! (Dummy Action)')" class="btn" style="padding: 6px 12px; font-size: 0.8rem; background-color: var(--danger);">🗑️ Delete</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="test-title-cell">Dina Amelia</td>
+                                <td>dina@flotest.com</td>
+                                <td><span class="status published">Menti</span></td>
+                                <td style="text-align: center;">
+                                    <div style="display: flex; gap: 8px; justify-content: center;">
+                                        <a href="edit.html" class="btn btn-secondary" style="padding: 6px 12px; font-size: 0.8rem;">✏️ Edit</a>
+                                        <button onclick="alert('User berhasil dihapus! (Dummy Action)')" class="btn" style="padding: 6px 12px; font-size: 0.8rem; background-color: var(--danger);">🗑️ Delete</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="test-title-cell">Eko Saputra</td>
+                                <td>eko@flotest.com</td>
+                                <td><span class="status published">Menti</span></td>
+                                <td style="text-align: center;">
+                                    <div style="display: flex; gap: 8px; justify-content: center;">
+                                        <a href="edit.html" class="btn btn-secondary" style="padding: 6px 12px; font-size: 0.8rem;">✏️ Edit</a>
+                                        <button onclick="alert('User berhasil dihapus! (Dummy Action)')" class="btn" style="padding: 6px 12px; font-size: 0.8rem; background-color: var(--danger);">🗑️ Delete</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="test-title-cell">Fajar Ramadhan</td>
+                                <td>fajar@flotest.com</td>
+                                <td><span class="status published">Menti</span></td>
+                                <td style="text-align: center;">
+                                    <div style="display: flex; gap: 8px; justify-content: center;">
+                                        <a href="edit.html" class="btn btn-secondary" style="padding: 6px 12px; font-size: 0.8rem;">✏️ Edit</a>
+                                        <button onclick="alert('User berhasil dihapus! (Dummy Action)')" class="btn" style="padding: 6px 12px; font-size: 0.8rem; background-color: var(--danger);">🗑️ Delete</button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 FloTest - FUJI </p>
+        </footer>
+    </div>
 </body>
 </html>

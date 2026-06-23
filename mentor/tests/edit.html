@@ -1,12 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <title>FloTest - Mentor Edit Ujian</title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
 </head>
-<body>
-    
+<body class="dashboard-layout">
+
+    <aside class="sidebar">
+        <div class="sidebar-brand">
+            <h2>⚡ Panel Mentor</h2>
+        </div>
+        <nav class="sidebar-menu">
+            <ul>
+                <li><a href="../dashboard.html">🏠 Dashboard Mentor</a></li>
+                <li><a href="index.html" class="active">📂 Menu Tests</a></li>
+                <li class="menu-separator"></li>
+                <li><a href="../../index.html" class="logout-link">🚪 Keluar</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <div class="main-wrapper">
+        <header class="main-header">
+            <div class="user-profile">
+                <span>Selamat Datang, <strong>Ahmad Mentor</strong> 👨‍🏫</span>
+            </div>
+        </header>
+
+        <main class="content-body">
+            <section class="welcome-banner" style="border-left: 5px solid var(--warning);">
+                <h2>✏️ Sesuaikan Data Kuis Anda</h2>
+                <p>Ubah judul materi, perbarui deskripsi petunjuk soal, atau ubah status tayang kuis ini.</p>
+                <a href="index.html" class="back-dashboard-btn" style="margin-bottom: 0;">&larr; Kembali ke Daftar Kuis</a>
+            </section>
+
+            <section class="form-container-box">
+                <form action="#" onsubmit="event.preventDefault(); alert('Perubahan paket kuis berhasil diperbarui!'); window.location.href='index.html';">
+                    <div class="form-group">
+                        <label>Judul Kuis (Title)</label>
+                        <input type="text" value="Pemrograman HTML & CSS Dasar" placeholder="Masukkan judul..." required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Deskripsi & Aturan Main Kuis (Description)</label>
+                        <textarea placeholder="Tulis instruksi..." required>Evaluasi tengah bab untuk mengukur kemahiran implementasi selector CSS tingkat lanjut.</textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Status Distribusi</label>
+                        <select required>
+                            <option value="Draft">Draft</option>
+                            <option value="Published" selected>Published</option>
+                            <option value="Archived">Archived</option>
+                        </select>
+                    </div>
+
+                    <div class="form-button-group">
+                        <button type="submit" class="btn" style="width: 100%; background-color: var(--warning);">💾 Simpan Perubahan Kuis</button>
+                    </div>
+                </form>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 FloTest - FUJI</p>
+        </footer>
+    </div>
 </body>
 </html>

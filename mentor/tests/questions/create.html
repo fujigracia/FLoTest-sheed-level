@@ -1,12 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <title>FloTest - Mentor Tambah Soal</title>
+    <link rel="stylesheet" href="../../../assets/css/style.css">
 </head>
-<body>
-    
+<body class="dashboard-layout">
+
+    <aside class="sidebar">
+        <div class="sidebar-brand">
+            <h2>⚡ Panel Mentor</h2>
+        </div>
+        <nav class="sidebar-menu">
+            <ul>
+                <li><a href="../../dashboard.html">🏠 Dashboard Mentor</a></li>
+                <li><a href="../index.html" class="active">📂 Menu Tests</a></li>
+                <li class="menu-separator"></li>
+                <li><a href="../../../index.html" class="logout-link">🚪 Keluar</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <div class="main-wrapper">
+        <header class="main-header">
+            <div class="user-profile">
+                <span>Selamat Datang, <strong>Ahmad Mentor</strong> 👨‍🏫</span>
+            </div>
+        </header>
+
+        <main class="content-body">
+            <section class="welcome-banner">
+                <h2>➕ Tambah Pertanyaan Kuis Baru</h2>
+                <p>Buat satu butir pertanyaan pilihan ganda baru serta tentukan bobot opsi kebenaran kuncinya.</p>
+                <a href="index.html" class="back-dashboard-btn" style="margin-bottom: 0;">&larr; Kembali ke Daftar Soal</a>
+            </section>
+
+            <section class="form-container-box">
+                <form action="#" onsubmit="event.preventDefault(); alert('Pertanyaan kuis baru berhasil ditambahkan!'); window.location.href='index.html';">
+                    <div class="form-group">
+                        <label>Teks Pertanyaan (Question Text)</label>
+                        <input type="text" placeholder="Masukkan materi kalimat pertanyaan..." required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Pilihan Opsi A</label>
+                        <input type="text" placeholder="Isi opsi A..." required>
+                    </div>
+                    <div class="form-group">
+                        <label>Pilihan Opsi B</label>
+                        <input type="text" placeholder="Isi opsi B..." required>
+                    </div>
+                    <div class="form-group">
+                        <label>Pilihan Opsi C</label>
+                        <input type="text" placeholder="Isi opsi C..." required>
+                    </div>
+                    <div class="form-group">
+                        <label>Pilihan Opsi D</label>
+                        <input type="text" placeholder="Isi opsi D..." required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Pilih Kunci Jawaban Benar</label>
+                        <select required>
+                            <option value="" disabled selected>-- Pilih Opsi Benar --</option>
+                            <option value="A">Opsi A</option>
+                            <option value="B">Opsi B</option>
+                            <option value="C">Opsi C</option>
+                            <option value="D">Opsi D</option>
+                        </select>
+                    </div>
+
+                    <div class="form-button-group">
+                        <button type="submit" class="btn" style="width: 100%;">🚀 Simpan Pertanyaan</button>
+                    </div>
+                </form>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 FloTest - FUJI</p>
+        </footer>
+    </div>
 </body>
 </html>

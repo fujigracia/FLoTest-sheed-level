@@ -65,9 +65,8 @@ body {
 }
 
 /* ==========================================================================
-   3. LAYOUT (Sidebar, Main Area, Grid & Centering)
+   3. LAYOUT
    ========================================================================== */
-/* Login Centering Layout */
 body.login-page-layout {
     display: flex !important;
     justify-content: center !important;
@@ -95,7 +94,6 @@ body.login-page-layout {
     margin: 0 auto !important;
 }
 
-/* Dashboard Layout */
 .dashboard-layout { 
     display: flex; 
     width: 100vw; 
@@ -148,7 +146,6 @@ body.login-page-layout {
     clear: both;
 }
 
-/* Tab Switcher Layout System (Pure CSS) */
 .tab-switch {
     display: none !important;
 }
@@ -176,7 +173,6 @@ body.login-page-layout {
     box-shadow: 0 4px 12px rgba(79, 70, 229, 0.25);
 }
 
-/* Container Grid */
 .stats-container { 
     display: grid; 
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); 
@@ -185,9 +181,8 @@ body.login-page-layout {
 }
 
 /* ==========================================================================
-   4. COMPONENTS (Cards, Buttons, Forms, Tables, Logo, & Specific Sheets)
+   4. COMPONENTS
    ========================================================================== */
-/* Premium Brand Logo */
 .brand-logo-center {
     display: inline-flex;
     align-items: center;
@@ -229,7 +224,6 @@ body.login-page-layout {
     color: transparent;
 }
 
-/* Sidebar Menu & Labels */
 .sidebar-menu { padding: 20px 12px; flex: 1; }
 .sidebar-menu ul { list-style: none; }
 .sidebar-menu ul li { margin-bottom: 5px; }
@@ -256,7 +250,6 @@ body.login-page-layout {
     background-color: rgba(255, 255, 255, 0.05);
 }
 
-/* Cards & Banners Component */
 .login-card { 
     background: #ffffff; 
     padding: 40px; 
@@ -279,7 +272,6 @@ body.login-page-layout {
 .info-section h3, .quick-action-box h3 { margin-bottom: 10px; font-size: 1.1rem; }
 .info-section p, .quick-action-box p { color: var(--text-muted); font-size: 0.9rem; }
 
-/* Buttons Component */
 .btn { display: inline-flex; align-items: center; justify-content: center; background-color: var(--primary); color: #ffffff; padding: 10px 20px; border: none; border-radius: 8px; cursor: pointer; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: all 0.2s; }
 .btn:hover { background-color: #4338ca; transform: translateY(-1px); box-shadow: 0 4px 12px rgba(79,70,229,0.2); }
 .btn-secondary { background-color: #ffffff; color: var(--text-color); border: 1px solid var(--border-color); }
@@ -288,7 +280,6 @@ body.login-page-layout {
 .back-dashboard-btn { display: inline-block; color: var(--primary); text-decoration: none; font-size: 0.9rem; font-weight: 600; margin-bottom: 25px; }
 .back-dashboard-btn:hover { text-decoration: underline; }
 
-/* Form & Input Components */
 .form-container-box { background: #ffffff; border: 1px solid var(--border-color); padding: 30px; border-radius: 12px; margin-top: 15px; }
 .form-group { margin-bottom: 20px; }
 .form-group label { display: block; margin-bottom: 6px; font-size: 0.85rem; font-weight: 600; color: #475569; }
@@ -314,16 +305,16 @@ body.login-page-layout {
 .form-group textarea {
     width: 100% !important;
     max-width: 100%;
-    min-height: 140px;      
+    min-height: 140px;       
     padding: 14px 16px;
     border: 2px solid #cbd5e1 !important; 
-    border-radius: 10px !important;       
+    border-radius: 10px !important;        
     font-size: 1rem;
-    font-family: inherit;                 
+    font-family: inherit;                
     color: #1e293b;
     background-color: #ffffff !important;
     box-sizing: border-box;
-    resize: vertical;                     
+    resize: vertical;                    
     transition: all 0.2s ease-in-out;
 }
 .form-group textarea:focus {
@@ -335,18 +326,17 @@ body.login-page-layout {
 .form-group select {
     width: 100% !important;
     max-width: 100%;
-    height: 52px;                                                                         
+    height: 52px;                                                                                                                                                                                                                           
     padding: 12px 16px;
     border: 2px solid #cbd5e1 !important; 
-    border-radius: 10px !important;       
+    border-radius: 10px !important;        
     font-size: 1rem;
-    font-family: inherit;                 
+    font-family: inherit;                
     color: #1e293b;
     background-color: #ffffff !important;
     cursor: pointer;
     box-sizing: border-box;
     transition: all 0.2s ease-in-out;
-    
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -354,7 +344,7 @@ body.login-page-layout {
     background-repeat: no-repeat !important;
     background-position: right 16px center !important;
     background-size: 18px !important;
-    padding-right: 45px !important;       
+    padding-right: 45px !important;        
 }
 .form-group select:focus {
     outline: none;
@@ -362,7 +352,6 @@ body.login-page-layout {
     box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.15) !important;
 }
 
-/* Single Dropdown HTML/CSS Component Setup */
 .btn-login-submit {
     display: block;
     width: 100%;
@@ -386,7 +375,6 @@ body.login-page-layout {
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
 
-/* Data Tables Component */
 .page-title-section { display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px; }
 .table-container { background: #ffffff; border: 1px solid var(--border-color); border-radius: 12px; overflow: hidden; }
 table { width: 100%; border-collapse: collapse; }
@@ -394,7 +382,6 @@ table th { background: #f8fafc; padding: 16px 20px; font-size: 0.8rem; font-weig
 table td { padding: 18px 20px; border-bottom: 1px solid var(--border-color); font-size: 0.95rem; color: #334155; }
 table tr:last-child td { border-bottom: none; }
 
-/* Test Sheet Layout Component */
 .test-sheet-box { background: #ffffff; border: 1px solid var(--border-color); border-radius: 12px; padding: 30px; margin-top: 10px; }
 .test-sheet-header { display: flex; justify-content: space-between; align-items: center; background: #f8fafc; padding: 16px 20px; border-radius: 8px; border: 1px solid var(--border-color); margin-bottom: 20px; }
 .test-sheet-header h3 { font-size: 1.1rem; color: var(--primary); font-weight: 700; }
@@ -404,14 +391,12 @@ table tr:last-child td { border-bottom: none; }
 .option-item input[type="radio"] { accent-color: var(--primary); margin-right: 10px; width: auto; height: 18px; }
 .test-form-footer { margin-top: 35px; padding-top: 15px; border-top: 1px solid #e2e8f0; display: flex; justify-content: space-between; align-items: center; }
 
-/* Score Display Component */
 .score-display-card { background: #f0fdf4; border: 1px solid #bbf7d0; text-align: center; padding: 35px; border-radius: 12px; margin-top: 15px; }
 .review-card-item { background: #ffffff; border: 1px solid var(--border-color); border-left: 5px solid #10b981; padding: 20px; border-radius: 8px; }
 
 /* ==========================================================================
-   5. UTILITIES (Badges, Overrides, & Specific Theme Enhancements)
+   5. UTILITIES
    ========================================================================== */
-/* Typography Extra */
 .login-header { text-align: center; margin-bottom: 30px; }
 .login-header p { text-align: center; color: var(--text-muted); font-size: 0.9rem; margin-top: 5px; margin-bottom: 30px; }
 .login-footer { margin-top: 20px; color: var(--text-muted); font-size: 0.8rem; text-align: center; }
@@ -433,14 +418,12 @@ table tr:last-child td { border-bottom: none; }
 .test-count-cell { font-weight: 600; }
 .question-text { font-size: 16px; margin-bottom: 15px; }
 
-/* Badges & Status */
 .status { display: inline-flex; padding: 4px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: 600; }
 .status.published { background: #d1fae5; color: #065f46; }
 .status.draft { background: #fef3c7; color: #92400e; }
 .status.archived { background: #fee2e2; color: #991b1b; }
 .badge-count { font-weight: 700; background: #e0e7ff; color: var(--primary); padding: 4px 14px; border-radius: 20px; font-size: 0.8rem; }
 
-/* Custom Left Borders Dashboard Stats */
 .card-admin-1 { border-left: 5px solid var(--primary); }
 .card-admin-2 { border-left: 5px solid #10b981; }
 .card-admin-3 { border-left: 5px solid var(--warning); }
@@ -449,7 +432,6 @@ table tr:last-child td { border-bottom: none; }
 .card-menti-1 { border-left: 5px solid #f59e0b; }
 .card-menti-2 { border-left: 5px solid #10b981; }
 
-/* Structural Forms Alignment Overrides */
 .form-login { width: 100%; text-align: left; }
 .form-group-email { margin-bottom: 18px; }
 .form-group-password { margin-bottom: 22px; }
@@ -458,7 +440,6 @@ table tr:last-child td { border-bottom: none; }
 .form-group-select { margin-bottom: 25px; }
 .nav-button-group { display: flex; gap: 8px; }
 
-/* Action Links & Demo Fast-Logins */
 .login-actions { margin-top: 25px; border-top: 1px dashed var(--border-color); padding-top: 25px; text-align: center; }
 .login-actions p { font-size: 0.85rem; font-weight: 700; color: var(--text-muted); margin-bottom: 18px; letter-spacing: 0.5px; text-transform: uppercase; }
 .login-buttons-group, .login-actions-group { display: flex; flex-direction: column; gap: 12px; width: 100%; align-items: center; margin-bottom: 25px; }
@@ -485,19 +466,22 @@ table tr:last-child td { border-bottom: none; }
 
 .role-link {
     display: block;
-    padding: 10px 12px;
-    color: #333;
+    width: 100%;
+    text-align: center;
+    padding: 12px;
+    border-radius: 8px;
     text-decoration: none;
-    font-size: 14px;
-    border-radius: 6px;
-    text-align: left;
-    margin-bottom: 6px;
-    transition: background 0.2s;
+    background: #f3f4f6;
+    color: #333;
+    font-weight: 600;
+    border: 1px solid #ddd;
+    transition: 0.3s;
 }
-.role-link:last-child { margin-bottom: 0; }
-.role-link:hover { background-color: #f1f5f9; color: #4f46e5; font-weight: bold; }
+.role-link:hover {
+    background: #4f46e5;
+    color: white;
+}
 
-/* Dashboard Specific Overrides */
 .logout-admin-btn { padding: 12px 16px; display: block; }
 .stats-admin-override { margin-bottom: 0 !important; }
 .quick-action-actions, .menti-action-buttons { margin-top: 15px; display: flex; gap: 10px; flex-wrap: wrap; }
@@ -505,7 +489,6 @@ table tr:last-child td { border-bottom: none; }
 .btn-submit-test { background-color: #10b981 !important; color: white; }
 .btn-view-result { margin-left: 0; }
 
-/* Premium Color Overrides */
 .welcome-mentor { background: linear-gradient(135deg, #4f46e5, #6366f1); color: white; }
 .welcome-mentor-title { color: white !important; }
 .welcome-mentor-desc { color: #e0e7ff !important; }
@@ -514,3 +497,43 @@ table tr:last-child td { border-bottom: none; }
 .welcome-menti-title { color: white !important; }
 .welcome-menti-desc { color: #ecfdf5 !important; }
 .quick-action-menti { border-top: 3px solid #10b981; }
+
+.role-list{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.question-text {
+    font-weight: 600;
+    margin-bottom: 4px;
+    color: #334155;
+}
+
+.correct-answer-text {
+    font-size: 0.85rem;
+    color: #059669;
+    background: #ecfdf5;
+    padding: 2px 8px;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.tab-content-section .welcome-banner {
+    margin-bottom: 1rem !important;
+}
+
+.form-container-box {
+    margin-top: 0 !important;
+    padding-top: 10px !important;
+}
+
+.form-group {
+    margin-bottom: 15px !important;
+}
+
+.form-group textarea {
+    min-height: 120px;
+}
+

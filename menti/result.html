@@ -3,19 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FloTest - Hasil Evaluasi</title>
+    <title>FloTest - Hasil Ujian Menti</title>
     <link rel="stylesheet" href="../assets/css/style.css">
+    <style>
+        /* Styling Khusus Halaman Review Hasil Jawaban */
+        .score-card {
+            background: #ffffff;
+            border-radius: 8px;
+            padding: 24px;
+            text-align: center;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+            margin-bottom: 24px;
+        }
+        .score-number {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: #16a34a; /* Warna hijau indikasi lulus */
+            margin: 12px 0;
+        }
+        .review-section {
+            background: #ffffff;
+            border-radius: 8px;
+            padding: 24px;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+        }
+        .review-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #1e293b;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #f1f5f9;
+            padding-bottom: 10px;
+        }
+        .answer-item {
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 16px;
+            margin-bottom: 16px;
+        }
+        /* FEATURE: Highlight Warna Status Jawaban */
+        .answer-item.correct {
+            border-left: 5px solid #16a34a;
+            background-color: #f0fdf4;
+        }
+        .answer-item.incorrect {
+            border-left: 5px solid #ef4444;
+            background-color: #fef2f2;
+        }
+        .question-text {
+            font-weight: 600;
+            color: #1e293b;
+            margin-bottom: 12px;
+        }
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            padding: 4px 8px;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+        .status-badge.correct {
+            background-color: #dcfce7;
+            color: #15803d;
+        }
+        .status-badge.incorrect {
+            background-color: #fee2e2;
+            color: #b91c1c;
+        }
+        .details-box {
+            font-size: 0.95rem;
+            color: #475569;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+    </style>
 </head>
 <body class="dashboard-layout">
+
     <aside class="sidebar">
         <div class="sidebar-brand">
-            <h2>🎓 Panel Menti</h2>
+            <h2>⚡ Panel Menti</h2>
         </div>
         <nav class="sidebar-menu">
             <ul>
-                <li><a href="dashboard.html">🏠 Dashboard</a></li>
-                <li><a href="take-test.html">✍️ Ujian Masuk</a></li>
-                <li><a href="result.html" class="active">📊 Riwayat Hasil</a></li>
+                <li><a href="dashboard.html">🏠 Dashboard Menti</a></li>
+                <li><a href="dashboard.html" class="active">📊 Menu View Results</a></li>
                 <li class="menu-separator"></li>
                 <li><a href="../index.html" class="logout-link">🚪 Keluar</a></li>
             </ul>
@@ -23,28 +99,47 @@
     </aside>
 
     <div class="main-wrapper">
-        <header class="main-header"></header>
+        <header class="main-header">
+            <div class="user-profile">
+                <span>Evaluasi Akhir: <strong>Siswa Menti</strong> 📊</span>
+            </div>
+        </header>
 
         <main class="content-body">
-            <h2>📊 Review & Hasil Evaluasi Nilai</h2>
-            <a href="dashboard.html" class="back-dashboard-btn">&larr; Kembali ke Dashboard</a>
-
-            <article class="score-display-card">
-                <p class="score-title">Hasil Ujian Kamu Telah Dinilai</p>
-                <h3>Skor Nilai: <span class="score-num">80</span> <span class="score-max">/ 100</span></h3>
-            </article>
-
-            <section class="review-list-section">
-                <h3>📋 Tinjauan Jawaban Soal:</h3>
-                
-                <article class="review-card-item">
-                    <p class="review-question"><strong>Soal 1:</strong> Apa fungsi HTML?</p>
-                    <div class="review-answers">
-                        <p class="correct-answer-text">✅ Jawaban Anda: A (Benar)</p>
-                        <p class="correct-answer-text">✅ Jawaban Benar: A</p>
-                    </div>
-                </article>
+            <section class="welcome-banner">
+                <h2>Lembar Hasil Evaluasi Ujian</h2>
+                <p>Tinjau kembali ringkasan nilai serta lembar jawaban yang benar untuk dijadikan bahan evaluasi belajar Anda.</p>
+                <a href="dashboard.html" class="back-dashboard-btn" style="margin-bottom: 0;">&larr; Kembali ke Dashboard Menti</a>
             </section>
+
+            <div class="score-card">
+                <h3 style="color: #64748b; font-size: 1.1rem; font-weight: 500;">NAMA UJIAN</h3>
+                <h2 style="color: #1e293b; margin-top: 4px;">Pemrograman HTML & CSS Dasar</h2>
+                <div class="score-number">85</div>
+                <p style="color: #475569;">Selamat! Anda dinyatakan **LULUS** untuk ambang batas materi ini.</p>
+            </div>
+
+            <div class="review-section">
+                <h3 class="review-title">🔍 Detail Koreksi Jawaban</h3>
+
+                <div class="answer-item correct">
+                    <div class="status-badge correct">✅ Benar</div>
+                    <div class="question-text">1. Tag HTML manakah yang paling tepat digunakan secara semantik untuk membungkus struktur navigasi utama?</div>
+                    <div class="details-box">
+                        <div>• Jawaban Kamu: <strong>&lt;nav&gt;</strong></div>
+                        <div style="color: #16a34a;">• Jawaban Benar: <strong>&lt;nav&gt;</strong></div>
+                    </div>
+                </div>
+
+                <div class="answer-item incorrect">
+                    <div class="status-badge incorrect">❌ Salah</div>
+                    <div class="question-text">2. Property CSS manakah yang digunakan untuk menebalkan teks elemen?</div>
+                    <div class="details-box">
+                        <div>• Jawaban Kamu: <strong>font-style: bold;</strong></div>
+                        <div style="color: #16a34a;">• Jawaban Benar: <strong>font-weight: bold;</strong></div>
+                    </div>
+                </div>
+            </div>
         </main>
 
         <footer>

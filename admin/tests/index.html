@@ -1,12 +1,108 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <title>FloTest - Manajemen Ujian</title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
 </head>
-<body>
-    
+<body class="dashboard-layout">
+
+    <aside class="sidebar">
+        <div class="sidebar-brand">
+            <h2>⚡ Panel Admin</h2>
+        </div>
+        <nav class="sidebar-menu">
+            <ul>
+                <li><a href="../dashboard.html">🏠 Dashboard Admin</a></li>
+                <li><a href="../user/index.html">👥 Menu Users</a></li>
+                <li><a href="index.html" class="active">📂 Menu Tests</a></li>
+                <li class="menu-separator"></li>
+                <li><a href="../../index.html" class="logout-link">🚪 Keluar</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <div class="main-wrapper">
+        <header class="main-header">
+            <div class="user-profile">
+                <span>Otoritas: <strong>Master Admin</strong> 👑</span>
+            </div>
+        </header>
+
+        <main class="content-body">
+            <section class="welcome-banner">
+                <h2>Manajemen Paket Ujian (Tests)</h2>
+                <p>Pantau, buat, atau ubah seluruh paket ujian global yang didistribusikan oleh para mentor ke siswa.</p>
+                <a href="../dashboard.html" class="back-dashboard-btn" style="margin-bottom: 0;">&larr; Kembali ke Dashboard Admin</a>
+            </section>
+
+            <div class="info-section">
+                <div class="page-title-section">
+                    <h3>📋 Daftar Paket Ujian</h3>
+                    <a href="create.html" class="btn">➕ Tambah Paket Tes</a>
+                </div>
+                
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Title</th>
+                                <th>Mentor</th>
+                                <th>Status</th>
+                                <th>Questions Count</th>
+                                <th style="text-align: center;">Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="test-title-cell">HTML Basic Ujian Utama</td>
+                                <td>Ahmad Mentor</td>
+                                <td><span class="status published">Published</span></td>
+                                <td><strong>10 Soal</strong></td>
+                                <td style="text-align: center;">
+                                    <div style="display: flex; gap: 6px; justify-content: center;">
+                                        <a href="questions/index.html" class="btn" style="padding: 6px 10px; font-size: 0.8rem; background-color: #4f46e5; text-decoration: none; display: inline-block;">👁️ View Questions</a>
+                                        <a href="edit.html" class="btn btn-secondary" style="padding: 6px 10px; font-size: 0.8rem;">✏️ Edit</a>
+                                        <button onclick="alert('Paket ujian berhasil dihapus!')" class="btn" style="padding: 6px 10px; font-size: 0.8rem; background-color: var(--danger);">🗑️ Delete</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="test-title-cell">CSS Basic & Flexbox Layout</td>
+                                <td>Siti Mentor</td>
+                                <td><span class="status draft">Draft</span></td>
+                                <td><strong>5 Soal</strong></td>
+                                <td style="text-align: center;">
+                                    <div style="display: flex; gap: 6px; justify-content: center;">
+                                        <a href="questions/index.html" class="btn" style="padding: 6px 10px; font-size: 0.8rem; background-color: #4f46e5; text-decoration: none; display: inline-block;">👁️ View Questions</a>
+                                        <a href="edit.html" class="btn btn-secondary" style="padding: 6px 10px; font-size: 0.8rem;">✏️ Edit</a>
+                                        <button onclick="alert('Paket ujian berhasil dihapus!')" class="btn" style="padding: 6px 10px; font-size: 0.8rem; background-color: var(--danger);">🗑️ Delete</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="test-title-cell">Responsive Web Design Mobile First</td>
+                                <td>Ahmad Mentor</td>
+                                <td><span class="status archived">Archived</span></td>
+                                <td><strong>8 Soal</strong></td>
+                                <td style="text-align: center;">
+                                    <div style="display: flex; gap: 6px; justify-content: center;">
+                                        <a href="questions/index.html" class="btn" style="padding: 6px 10px; font-size: 0.8rem; background-color: #4f46e5; text-decoration: none; display: inline-block;">👁️ View Questions</a>
+                                        <a href="edit.html" class="btn btn-secondary" style="padding: 6px 10px; font-size: 0.8rem;">✏️ Edit</a>
+                                        <button onclick="alert('Paket ujian berhasil dihapus!')" class="btn" style="padding: 6px 10px; font-size: 0.8rem; background-color: var(--danger);">🗑️ Delete</button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 FloTest - FUJI </p>
+        </footer>
+    </div>
 </body>
 </html>

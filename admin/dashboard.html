@@ -8,24 +8,19 @@
 </head>
 <body class="dashboard-layout">
 
-    <input type="radio" name="admin-tab" id="tab-dashboard" class="tab-switch" checked>
-    <input type="radio" name="admin-tab" id="tab-mentor" class="tab-switch">
-    <input type="radio" name="admin-tab" id="tab-menti" class="tab-switch">
-    <input type="radio" name="admin-tab" id="tab-tes" class="tab-switch">
-
-    <aside class="sidebar">
+    <input type="radio" name="dashboard-tabs" id="tab-dashboard" class="tab-switch" checked>
+    <input type="radio" name="dashboard-tabs" id="tab-menti" class="tab-switch"> <input type="radio" name="dashboard-tabs" id="tab-tes" class="tab-switch">   <input type="radio" name="dashboard-tabs" id="tab-mentor" class="tab-switch"> <aside class="sidebar">
         <div class="sidebar-brand">
-            <h2>⚡ FloTest Panel</h2>
+            <h2>⚡ Panel Admin</h2>
         </div>
         <nav class="sidebar-menu">
             <ul>
-                <li><label for="tab-dashboard">📊 Dashboard</label></li>
-                <div class="menu-separator"></div>
-                <li><label for="tab-mentor">👩‍🏫 Kelola Mentor</label></li>
-                <li><label for="tab-menti">🎓 Kelola Menti</label></li>
-                <li><label for="tab-tes">📝 Kelola Tes</label></li>
-                <div class="menu-separator"></div>
-                <li><a href="../index.html" class="logout-link logout-admin-btn">🚪 Keluar</a></li>
+                <li><label for="tab-dashboard">🏠 Dashboard Admin</label></li>
+                <li><a href="user/index.html">👥 Menu Users</a></li>
+                <li><a href="tests/index.html" style="color: #94a3b8; padding: 12px 16px; display: block; text-decoration: none;">📂 Menu Tests</a></li>
+                <li><label for="tab-mentor">❓ Menu Questions</label></li>
+                <li class="menu-separator"></li>
+                <li><a href="../index.html" class="logout-link">🚪 Keluar</a></li>
             </ul>
         </nav>
     </aside>
@@ -33,135 +28,84 @@
     <div class="main-wrapper">
         <header class="main-header">
             <div class="user-profile">
-                <span>Halo, <strong>Super Admin</strong> 👑</span>
+                <span>Otoritas: <strong>Master Admin</strong> 👑</span>
             </div>
         </header>
 
         <main class="content-body">
             
             <div id="content-dashboard" class="tab-content-section">
-                <section class="welcome-banner">
-                    <h2>Ringkasan Data Sistem Global</h2>
-                    <p>Memantau aktivitas, total data pengguna, dan statistik platform FloTest saat ini.</p>
+                <section class="welcome-banner" style="border-left: 5px solid var(--primary);">
+                    <h2>Selamat Datang, Admin Utama!</h2>
+                    <p>Kendali penuh sistem FloTest. Pantau statistik pengguna, kelola bank ujian, dan awasi distribusi soal di sini.</p>
                 </section>
-
+                
                 <section class="stats-container stats-admin-override">
                     <article class="card card-admin-1">
                         <div class="card-icon">👥</div>
                         <div class="card-info">
-                            <h3>Total Mentor</h3>
-                            <p class="stat-number">2</p>
-                            <span class="stat-desc">Akun mentor aktif</span>
+                            <h3>Total Users</h3>
+                            <p class="stat-number">8</p>
+                            <span class="stat-desc">Mentor & Menti terdaftar</span>
                         </div>
                     </article>
                     <article class="card card-admin-2">
-                        <div class="card-icon">🎓</div>
+                        <div class="card-icon">📂</div>
                         <div class="card-info">
-                            <h3>Total Menti</h3>
-                            <p class="stat-number">5</p>
-                            <span class="stat-desc">Siswa terdaftar</span>
+                            <h3>Total Tests</h3>
                         </div>
                     </article>
+
                     <article class="card card-admin-3">
-                        <div class="card-icon">📝</div>
+                        <div class="card-icon">❓</div>
                         <div class="card-info">
-                            <h3>Total Tes</h3>
-                            <p class="stat-number">3</p>
-                            <span class="stat-desc">Bank soal tersedia</span>
+                            <h3>Total Questions</h3>
+
                         </div>
                     </article>
                 </section>
 
-                <section class="info-section">
-                    <h3>🛠️ Pusat Kendali Admin</h3>
-                    <p>Selamat datang di panel utama! Gunakan menu navigasi di samping kiri untuk langsung mengganti tampilan data tanpa berpindah halaman.</p>
-                </section>
-            </div>
-
-            <div id="content-mentor" class="tab-content-section">
-                <section class="welcome-banner">
-                    <h2>Manajemen Data Mentor</h2>
-                    <p>Berikut adalah rincian data staf pengajar dan instruktur yang terdaftar pada platform.</p>
-                    <a href="dashboard.html" class="back-dashboard-btn">&larr; Kembali ke Dashboard</a>
-                </section>
-
-                <div class="info-section">
-                    <div class="page-title-section">
-                        <h3>👥 Daftar Pengguna: Mentor</h3>
-                        <span class="badge-count">2 Mentor</span>
+                <section class="quick-action-box">
+                    <h3>⚡ Pintasan Manajemen</h3>
+                    <p>Pilih manajemen data spesifik di bawah ini untuk melakukan pembaruan berkas sistem.</p>
+                    <div class="quick-action-actions">
+                        <label for="tab-menti" class="btn" style="cursor: pointer;">Kelola Pengguna</label>
+                        <label for="tab-tes" class="btn btn-secondary" style="cursor: pointer;">Tinjau Bank Ujian</label>
                     </div>
-                    <div class="table-container">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Nama Mentor</th>
-                                    <th>Email</th>
-                                    <th>Keahlian</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="test-title-cell">Devon Lane</td>
-                                    <td>devon@flotest.com</td>
-                                    <td>HTML & CSS Specialist</td>
-                                </tr>
-                                <tr>
-                                    <td class="test-title-cell">Jane Cooper</td>
-                                    <td>jane@flotest.com</td>
-                                    <td>UI/UX & Responsive Design</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
+                </section>
             </div>
 
             <div id="content-menti" class="tab-content-section">
                 <section class="welcome-banner">
-                    <h2>Manajemen Data Menti</h2>
-                    <p>Pantau data program kelas berjalan beserta keaktifan dari seluruh siswa terdaftar.</p>
-                    <a href="dashboard.html" class="back-dashboard-btn">&larr; Kembali ke Dashboard</a>
+                    <h2>Manajemen Data Pengguna (Users)</h2>
+                    <p>Berikut adalah daftar akun Mentor dan Menti yang terverifikasi di dalam database FloTest.</p>
+                    <label for="tab-dashboard" class="back-dashboard-btn" style="cursor: pointer;">&larr; Kembali ke Dashboard</label>
                 </section>
 
                 <div class="info-section">
                     <div class="page-title-section">
-                        <h3>🎓 Daftar Pengguna: Menti</h3>
-                        <span class="badge-count">5 Menti</span>
+                        <h3>📋 Daftar Akun Terdaftar</h3>
+                        <span class="badge-count">150 Pengguna</span>
                     </div>
                     <div class="table-container">
                         <table>
                             <thead>
                                 <tr>
-                                    <th>Nama Menti</th>
-                                    <th>Program</th>
-                                    <th>Status Kelas</th>
+                                    <th>Nama Pengguna</th>
+                                    <th>Email</th>
+                                    <th>Peran (Role)</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td class="test-title-cell">Budi Santoso</td>
-                                    <td>HTML Basic Class</td>
-                                    <td><span class="status published">Aktif</span></td>
+                                    <td class="test-title-cell">Ahmad Mentor</td>
+                                    <td>ahmad@flotest.com</td>
+                                    <td><span class="status draft" style="background: #e0f2fe; color: #0369a1;">Mentor</span></td>
                                 </tr>
                                 <tr>
-                                    <td class="test-title-cell">Siti Rahma</td>
-                                    <td>CSS Basic Class</td>
-                                    <td><span class="status published">Aktif</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="test-title-cell">Andi Wijaya</td>
-                                    <td>Responsive Design Class</td>
-                                    <td><span class="status draft">Pending</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="test-title-cell">Rini Lestari</td>
-                                    <td>HTML Basic Class</td>
-                                    <td><span class="status published">Aktif</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="test-title-cell">Eko Prasetyo</td>
-                                    <td>Responsive Design Class</td>
-                                    <td><span class="status archived">Lulus</span></td>
+                                    <td class="test-title-cell">Budi Menti Student</td>
+                                    <td>budi@flotest.com</td>
+                                    <td><span class="status published">Menti</span></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -171,40 +115,35 @@
 
             <div id="content-tes" class="tab-content-section">
                 <section class="welcome-banner">
-                    <h2>Pemantauan Seluruh Ujian</h2>
-                    <p>Melihat dan melacak seluruh status ujian yang dibuat oleh para mentor kelas.</p>
-                    <a href="dashboard.html" class="back-dashboard-btn">&larr; Kembali ke Dashboard</a>
+                    <h2>Daftar Paket Ujian Global (Tests)</h2>
+                    <p>Pantau status seluruh lembar tes dan kuis yang telah dirancang oleh para mentor.</p>
+                    <label for="tab-dashboard" class="back-dashboard-btn" style="cursor: pointer;">&larr; Kembali ke Dashboard</label>
                 </section>
 
                 <div class="info-section">
                     <div class="page-title-section">
-                        <h3>📝 Pemantauan Seluruh Tes</h3>
-                        <span class="badge-count">3 Tes Total</span>
+                        <h3>📋 Distribusi Bank Tes</h3>
+                        <span class="badge-count">12 Paket Kuis</span>
                     </div>
                     <div class="table-container">
                         <table>
                             <thead>
                                 <tr>
-                                    <th>Judul Tes</th>
-                                    <th>Status</th>
-                                    <th>Jumlah Soal</th>
+                                    <th>Judul Paket Ujian</th>
+                                    <th>Dibuat Oleh</th>
+                                    <th>Status Publikasi</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td class="test-title-cell">HTML Basic Test</td>
+                                    <td class="test-title-cell">Pemrograman HTML & CSS Dasar</td>
+                                    <td>Mentor Utama</td>
                                     <td><span class="status published">Published</span></td>
-                                    <td>10 Soal</td>
                                 </tr>
                                 <tr>
-                                    <td class="test-title-cell">CSS Basic Test</td>
+                                    <td class="test-title-cell">Algoritma Javascript Lanjutan</td>
+                                    <td>Ahmad Mentor</td>
                                     <td><span class="status draft">Draft</span></td>
-                                    <td>8 Soal</td>
-                                </tr>
-                                <tr>
-                                    <td class="test-title-cell">Responsive Design Test</td>
-                                    <td><span class="status archived">Archived</span></td>
-                                    <td>15 Soal</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -212,11 +151,74 @@
                 </div>
             </div>
 
-        </main>
+            <div id="content-mentor" class="tab-content-section">
+    <section class="welcome-banner">
+        <h2>Kumpulan Soal / Pertanyaan (Questions)</h2>
+        <p>Melihat dan memantau rincian database pertanyaan pilihan ganda secara global.</p>
+        <label for="tab-dashboard" class="back-dashboard-btn" style="cursor: pointer;">&larr; Kembali ke Dashboard</label>
+    </section>
+
+    <div class="info-section">
+        <div class="page-title-section">
+            <h3>📋 Repositori Soal Global</h3>
+            <button onclick="window.location.href='tambah-soal.html'" class="btn" style="background: #2563eb; color: white; padding: 8px 16px; border: none; border-radius: 6px; cursor: pointer;">
+                + Tambah Soal
+            </button>
+        </div>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 50px; text-align: center;">No</th>
+                        <th>PERTANYAAN & KUNCI</th>
+                        <th style="width: 150px; text-align: center;">AKSI</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="text-align: center;">1</td>
+                        <td>
+                            <div class="question-text">Tag HTML manakah yang digunakan secara khusus untuk membuat hyperlink?</div>
+                            <div class="correct-answer-text">Kunci Jawaban: B (&lt;a&gt;)</div>
+                        </td>
+                        <td style="text-align: center;">
+                            <button class="btn btn-secondary" style="padding: 4px 8px; font-size: 0.8rem;">Edit</button>
+                            <button class="btn" style="padding: 4px 8px; font-size: 0.8rem; background: var(--danger);">Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;">2</td>
+                        <td>
+                            <div class="question-text">Mana di bawah ini yang merupakan cara membuat variabel di JavaScript?</div>
+                            <div class="correct-answer-text">Kunci Jawaban: A (let / const)</div>
+                        </td>
+                        <td style="text-align: center;">
+                            <button class="btn btn-secondary" style="padding: 4px 8px; font-size: 0.8rem;">Edit</button>
+                            <button class="btn" style="padding: 4px 8px; font-size: 0.8rem; background: var(--danger);">Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;">3</td>
+                        <td>
+                            <div class="question-text">Apa fungsi dari perintah console.log() dalam JavaScript?</div>
+                            <div class="correct-answer-text">Kunci Jawaban: C (Menampilkan pesan ke konsol)</div>
+                        </td>
+                        <td style="text-align: center;">
+                            <button class="btn btn-secondary" style="padding: 4px 8px; font-size: 0.8rem;">Edit</button>
+                            <button class="btn" style="padding: 4px 8px; font-size: 0.8rem; background: var(--danger);">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
 
         <footer>
             <p>&copy; 2026 FloTest - FUJI </p>
         </footer>
     </div>
+
+    <script src="../assets/js/main.js"></script>
 </body>
 </html>

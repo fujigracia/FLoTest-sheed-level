@@ -1,12 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <title>FloTest - Tambah User</title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
 </head>
-<body>
-    
+<body class="dashboard-layout">
+
+    <aside class="sidebar">
+        <div class="sidebar-brand">
+            <h2>⚡ Panel Admin</h2>
+        </div>
+        <nav class="sidebar-menu">
+            <ul>
+                <li><a href="../dashboard.html">🏠 Dashboard Admin</a></li>
+                <li><a href="index.html" class="active">👥 Menu Users</a></li>
+                <li class="menu-separator"></li>
+                <li><a href="../../index.html" class="logout-link">🚪 Keluar</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <div class="main-wrapper">
+        <header class="main-header">
+            <div class="user-profile">
+                <span>Otoritas: <strong>Master Admin</strong> 👑</span>
+            </div>
+        </header>
+
+        <main class="content-body">
+            <section class="welcome-banner">
+                <h2>➕ Buat Akun Pengguna Baru</h2>
+                <p>Isi informasi formulir pendaftaran di bawah ini untuk mengidentifikasi pengguna baru di dalam sistem.</p>
+                <a href="index.html" class="back-dashboard-btn" style="margin-bottom: 0;">&larr; Kembali ke Daftar Users</a>
+            </section>
+
+            <section class="form-container-box">
+                <form action="#" onsubmit="event.preventDefault(); alert('User baru berhasil dibuat! (Dummy Action)'); window.location.href='index.html';">
+                    <div class="form-group">
+                        <label>Nama Lengkap Pengguna</label>
+                        <input type="text" placeholder="Masukkan nama lengkap..." required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Alamat Email Resmi</label>
+                        <input type="email" placeholder="contoh: user@flotest.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Hak Akses / Peran Akun</label>
+                        <select required>
+                            <option value="" disabled selected>-- Pilih Peran Pengguna --</option>
+                            <option value="Admin">Admin</option>
+                            <option value="Mentor">Mentor</option>
+                            <option value="Menti">Menti / Student</option>
+                        </select>
+                    </div>
+
+                    <div class="form-button-group">
+                        <button type="submit" class="btn" style="width: 100%;">🚀 Simpan & Daftarkan Akun</button>
+                    </div>
+                </form>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 FloTest - FUJI </p>
+        </footer>
+    </div>
 </body>
 </html>

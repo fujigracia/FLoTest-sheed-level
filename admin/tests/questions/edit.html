@@ -31,51 +31,32 @@
         </header>
 
         <main class="content-body">
-            <section class="welcome-banner" style="border-left: 5px solid var(--warning);">
-                <h2>✏️ Modifikasi Butir Pertanyaan</h2>
-                <p>Ubah muatan materi redaksi soal kuis atau perbarui penetapan opsi pilihan kunci jawaban yang benar.</p>
-                <a href="index.html" class="back-dashboard-btn" style="margin-bottom: 0;">&larr; Kembali ke Daftar Soal</a>
-            </section>
+            <section class="welcome-banner border-warning">
+            <h2>✏️ Modifikasi Butir Pertanyaan</h2>
+            <p>Ubah muatan materi redaksi soal kuis atau perbarui penetapan opsi pilihan kunci jawaban yang benar.</p>
+            <a href="index.html" class="back-dashboard-btn">&larr; Kembali ke Daftar Soal</a>
+        </section>
 
-            <section class="form-container-box">
-                <form action="#" onsubmit="event.preventDefault(); alert('Pertanyaan kuis berhasil diperbarui!'); window.location.href='index.html';">
-                    <div class="form-group">
-                        <label>Teks Pertanyaan (Question Text)</label>
-                        <input type="text" value="Tag HTML manakah yang digunakan secara khusus untuk membuat hyperlink?" placeholder="Ketik pertanyaan..." required>
-                    </div>
+        <section class="form-container-box">
+            <form action="#" onsubmit="event.preventDefault(); alert('Pertanyaan kuis berhasil diperbarui!'); window.location.href='index.html';">
+                <div class="form-group">
+                    <label for="question">Teks Pertanyaan (Question Text)</label>
+                    <input type="text" id="question" value="Tag HTML manakah yang digunakan secara khusus untuk membuat hyperlink?" required>
+                </div>
 
-                    <div class="form-group">
-                        <label>Pilihan Opsi A</label>
-                        <input type="text" value="<link>" placeholder="Opsi A" required>
-                    </div>
-                    <div class="form-group">
-                        <label>Pilihan Opsi B</label>
-                        <input type="text" value="<a>" placeholder="Opsi B" required>
-                    </div>
-                    <div class="form-group">
-                        <label>Pilihan Opsi C</label>
-                        <input type="text" value="<href>" placeholder="Opsi C" required>
-                    </div>
-                    <div class="form-group">
-                        <label>Pilihan Opsi D</label>
-                        <input type="text" value="<url>" placeholder="Opsi D" required>
-                    </div>
+                <div class="form-group">
+                    <label for="answer">Jawaban Kunci Benar</label>
+                    <select id="answer" required>
+                        <option value="A">Opsi A</option>
+                        <option value="B" selected>Opsi B</option>
+                        <option value="C">Opsi C</option>
+                        <option value="D">Opsi D</option>
+                    </select>
+                </div>
 
-                    <div class="form-group">
-                        <label>Jawaban Kunci Benar</label>
-                        <select required>
-                            <option value="A">Opsi A</option>
-                            <option value="B" selected>Opsi B</option>
-                            <option value="C">Opsi C</option>
-                            <option value="D">Opsi D</option>
-                        </select>
-                    </div>
-
-                    <div class="form-button-group">
-                        <button type="submit" class="btn" style="width: 100%; background-color: var(--warning);">💾 Perbarui Pertanyaan</button>
-                    </div>
-                </form>
-            </section>
+                <button type="submit" class="btn-update">💾 Perbarui Pertanyaan</button>
+            </form>
+        </section>
         </main>
 
         <footer>

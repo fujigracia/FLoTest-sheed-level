@@ -38,45 +38,45 @@
             </section>
 
             <section class="form-container-box">
-                <form action="#" onsubmit="event.preventDefault(); alert('Pertanyaan baru berhasil disimpan!'); window.location.href='index.html';">
-                    <div class="form-group">
-                        <label>Teks Pertanyaan (Question Text)</label>
-                        <input type="text" placeholder="Masukkan kalimat pertanyaan kuis..." required>
-                    </div>
+            <form action="#" onsubmit="event.preventDefault(); alert('Pertanyaan baru berhasil disimpan!'); window.location.href='index.html';">
+                <div class="form-group">
+                    <label for="question">Teks Pertanyaan (Question Text)</label>
+                    <input type="text" id="question" placeholder="Masukkan kalimat pertanyaan kuis..." required>
+                </div>
 
-                    <div class="form-group">
-                        <label>Pilihan Opsi A</label>
-                        <input type="text" placeholder="Tulis jawaban opsi A..." required>
-                    </div>
-                    <div class="form-group">
-                        <label>Pilihan Opsi B</label>
-                        <input type="text" placeholder="Tulis jawaban opsi B..." required>
-                    </div>
-                    <div class="form-group">
-                        <label>Pilihan Opsi C</label>
-                        <input type="text" placeholder="Tulis jawaban opsi C..." required>
-                    </div>
-                    <div class="form-group">
-                        <label>Pilihan Opsi D</label>
-                        <input type="text" placeholder="Tulis jawaban opsi D..." required>
-                    </div>
+                <div class="form-group">
+                    <label for="opsiA">Pilihan Opsi A</label>
+                    <input type="text" id="opsiA" placeholder="Tulis jawaban opsi A..." required>
+                </div>
+                <div class="form-group">
+                    <label for="opsiB">Pilihan Opsi B</label>
+                    <input type="text" id="opsiB" placeholder="Tulis jawaban opsi B..." required>
+                </div>
+                <div class="form-group">
+                    <label for="opsiC">Pilihan Opsi C</label>
+                    <input type="text" id="opsiC" placeholder="Tulis jawaban opsi C..." required>
+                </div>
+                <div class="form-group">
+                    <label for="opsiD">Pilihan Opsi D</label>
+                    <input type="text" id="opsiD" placeholder="Tulis jawaban opsi D..." required>
+                </div>
 
-                    <div class="form-group">
-                        <label>Jawaban Kunci Benar</label>
-                        <select required>
-                            <option value="" disabled selected>-- Tentukan Opsi yang Benar --</option>
-                            <option value="A">Opsi A</option>
-                            <option value="B">Opsi B</option>
-                            <option value="C">Opsi C</option>
-                            <option value="D">Opsi D</option>
-                        </select>
-                    </div>
+                <div class="form-group">
+                    <label for="correctAnswer">Jawaban Kunci Benar</label>
+                    <select id="correctAnswer" required>
+                        <option value="" disabled selected>-- Tentukan Opsi yang Benar --</option>
+                        <option value="A">Opsi A</option>
+                        <option value="B">Opsi B</option>
+                        <option value="C">Opsi C</option>
+                        <option value="D">Opsi D</option>
+                    </select>
+                </div>
 
-                    <div class="form-button-group">
-                        <button type="submit" class="btn" style="width: 100%;">🚀 Simpan Butir Pertanyaan</button>
-                    </div>
-                </form>
-            </section>
+                <div class="form-button-group">
+                    <button type="submit" class="btn-submit">🚀 Simpan Butir Pertanyaan</button>
+                </div>
+            </form>
+        </section>
         </main>
 
         <footer>

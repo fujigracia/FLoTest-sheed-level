@@ -16,7 +16,8 @@
             <ul>
                 <li><a href="../../dashboard.html">🏠 Dashboard Admin</a></li>
                 <li><a href="../../user/index.html">👥 Menu Users</a></li>
-                <li><a href="../index.html" class="active">📂 Menu Tests</a></li>
+                <li><a href="../index.html">📂 Menu Tests</a></li>
+                <li><a href="index.html" class="active">❓ Menu Questions</a></li>
                 <li class="menu-separator"></li>
                 <li><a href="../../../index.html" class="logout-link">🚪 Keluar</a></li>
             </ul>   
@@ -34,7 +35,7 @@
             <section class="welcome-banner">
                 <h2>Bank Soal: HTML Basic Ujian Utama</h2>
                 <p>Mengelola rincian butir pertanyaan, pilihan opsi jawaban, beserta kunci penilaian ujian kuis.</p>
-                <a href="../index.html" class="back-dashboard-btn" style="margin-bottom: 0;">&larr; Kembali ke Daftar Paket Ujian (Tests)</a>
+                <a href="../../dashboard.html" class="back-dashboard-btn" style="margin-bottom: 0;">&larr; Kembali ke Dashboard Admin</a>
             </section>
 
             <div class="info-section">
@@ -54,40 +55,51 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td style="text-align: center;"><strong>1</strong></td>
-                                <td class="test-title-cell">Tag HTML manakah yang digunakan secara khusus untuk membuat hyperlink?</td>
-                                <td><span class="status published" style="background: #f0fdf4; color: #16a34a;">Pilihan Ganda</span></td>
-                                <td style="text-align: center;">
-                                    <div style="display: flex; gap: 8px; justify-content: center;">
-                                        <a href="edit.html" class="btn btn-secondary" style="padding: 6px 12px; font-size: 0.8rem;">✏️ Edit</a>
-                                        <button onclick="alert('Pertanyaan kuis berhasil dihapus!')" class="btn" style="padding: 6px 12px; font-size: 0.8rem; background-color: var(--danger);">🗑️ Delete</button>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="text-align: center;"><strong>2</strong></td>
-                                <td class="test-title-cell">Elemen HTML yang berfungsi untuk mendefinisikan konten baris utama paling atas adalah...</td>
-                                <td><span class="status published" style="background: #f0fdf4; color: #16a34a;">Pilihan Ganda</span></td>
-                                <td style="text-align: center;">
-                                    <div style="display: flex; gap: 8px; justify-content: center;">
-                                        <a href="edit.html" class="btn btn-secondary" style="padding: 6px 12px; font-size: 0.8rem;">✏️ Edit</a>
-                                        <button onclick="alert('Pertanyaan kuis berhasil dihapus!')" class="btn" style="padding: 6px 12px; font-size: 0.8rem; background-color: var(--danger);">🗑️ Delete</button>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="text-align: center;"><strong>3</strong></td>
-                                <td class="test-title-cell">Karakter manakah yang digunakan untuk mengindikasikan tag penutup di HTML?</td>
-                                <td><span class="status published" style="background: #f0fdf4; color: #16a34a;">Pilihan Ganda</span></td>
-                                <td style="text-align: center;">
-                                    <div style="display: flex; gap: 8px; justify-content: center;">
-                                        <a href="edit.html" class="btn btn-secondary" style="padding: 6px 12px; font-size: 0.8rem;">✏️ Edit</a>
-                                        <button onclick="alert('Pertanyaan kuis berhasil dihapus!')" class="btn" style="padding: 6px 12px; font-size: 0.8rem; background-color: var(--danger);">🗑️ Delete</button>
-                                    </div>
-                                </td>
-                            </tr>
-                        </tbody>
+                        <tr>
+                            <td class="text-center"><strong>1</strong></td>
+                            <td>
+                                Tag HTML manakah yang digunakan secara khusus untuk membuat hyperlink?
+                                <div class="answer-key">Kunci Jawaban: B. &lt;a&gt;</div>
+                            </td>
+                            <td><span class="status-published">Pilihan Ganda</span></td>
+                            <td class="text-center">
+                                <div class="btn-action-group">
+                                    <a href="edit.html" class="btn btn-secondary">✏️ Edit</a>
+                                    <button onclick="alert('Paket ujian berhasil dihapus!')" class="btn" style="padding: 6px 10px; font-size: 0.8rem; background-color: var(--danger);">🗑️ Delete</button>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="text-center"><strong>2</strong></td>
+                            <td>
+                                Elemen HTML yang berfungsi untuk mendefinisikan konten baris utama paling atas adalah...
+                                <div class="answer-key">Kunci Jawaban: C. &lt;header&gt;</div>
+                            </td>
+                            <td><span class="status-published">Pilihan Ganda</span></td>
+                            <td class="text-center">
+                                <div class="btn-action-group">
+                                    <a href="edit.html" class="btn btn-secondary">✏️ Edit</a>
+                                    <button onclick="alert('Paket ujian berhasil dihapus!')" class="btn" style="padding: 6px 10px; font-size: 0.8rem; background-color: var(--danger);">🗑️ Delete</button>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="text-center"><strong>3</strong></td>
+                            <td>
+                                Karakter manakah yang digunakan untuk mengindikasikan tag penutup di HTML?
+                                <div class="answer-key">Kunci Jawaban: D. /</div>
+                            </td>
+                            <td><span class="status-published">Pilihan Ganda</span></td>
+                            <td class="text-center">
+                                <div class="btn-action-group">
+                                    <a href="edit.html" class="btn btn-secondary">✏️ Edit</a>
+                                    <button onclick="alert('Paket ujian berhasil dihapus!')" class="btn" style="padding: 6px 10px; font-size: 0.8rem; background-color: var(--danger);">🗑️ Delete</button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
                     </table>
                 </div>
             </div>

@@ -44,15 +44,35 @@
                     <input type="text" id="question" value="Tag HTML manakah yang digunakan secara khusus untuk membuat hyperlink?" required>
                 </div>
 
-                <div class="form-group">
-                    <label for="answer">Jawaban Kunci Benar</label>
-                    <select id="answer" required>
-                        <option value="A">Opsi A</option>
-                        <option value="B" selected>Opsi B</option>
-                        <option value="C">Opsi C</option>
-                        <option value="D">Opsi D</option>
-                    </select>
-                </div>
+            <div class="form-group">
+                <label for="optionA">Pilihan A</label>
+                <input type="text" id="optionA" value="<p>" required>
+            </div>
+
+            <div class="form-group">
+                <label for="optionB">Pilihan B</label>
+                <input type="text" id="optionB" value="<a>" required>
+            </div>
+
+            <div class="form-group">
+                <label for="optionC">Pilihan C</label>
+                <input type="text" id="optionC" value="<link>" required>
+            </div>
+
+            <div class="form-group">
+                <label for="optionD">Pilihan D</label>
+                <input type="text" id="optionD" value="<href>" required>
+            </div>
+
+<div class="form-group">
+    <label for="answer">Jawaban Kunci Benar</label>
+    <select id="answer" required>
+        <option value="A">Opsi A</option>
+        <option value="B" selected>Opsi B</option>
+        <option value="C">Opsi C</option>
+        <option value="D">Opsi D</option>
+    </select>
+</div>
 
                 <button type="submit" class="btn-update">💾 Perbarui Pertanyaan</button>
             </form>

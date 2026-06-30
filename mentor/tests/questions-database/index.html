@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FloTest - Kelola Soal Basis Data</title>
+    <link rel="stylesheet" href="../../../assets/css/style.css">
+</head>
+<body class="dashboard-layout">
+
+    <aside class="sidebar">
+        <div class="sidebar-brand">
+            <h2>⚡ Panel Mentor</h2>
+        </div>
+        <nav class="sidebar-menu">
+            <ul>
+                <li><a href="../../dashboard.html">🏠 Dashboard Mentor</a></li>
+                <li><a href="../index.html" class="active">📂 Menu Tests</a></li>
+                <li class="menu-separator"></li>
+                <li><a href="../../../index.html" class="logout-link">🚪 Keluar</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <div class="main-wrapper">
+        <header class="main-header">
+            <div class="user-profile">
+                <span>Selamat Datang, <strong>Ahmad Mentor</strong> 👨‍🏫</span>
+            </div>
+        </header>
+
+        <main class="content-body">
+            <section class="welcome-banner">
+                <h2>Bank Soal: Basis Data (Database)</h2>
+                <p>Kelola daftar pertanyaan seputar database, SQL query, dan relasi tabel untuk ujian kelas Anda.</p>
+                <a href="../index.html" class="back-dashboard-btn" style="margin-bottom: 0;">&larr; Kembali ke Daftar Kuis</a>
+            </section>
+
+            <div class="info-section">
+                <div class="page-title-section">
+                    <h3>📋 Butir Soal Basis Data</h3>
+                    <a href="create.html" class="btn">➕ Tambah Soal</a>
+                </div>
+                
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th style="width: 80px; text-align: center;">Number</th>
+                                <th>Question Text</th>
+                                <th style="width: 200px; text-align: center;">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                    <tr>
+                        <td style="text-align: center;"><strong>1</strong></td>
+                        <td class="test-title-cell">
+                            Perintah SQL manakah yang digunakan untuk mengambil data dari tabel?<br>
+                            <small style="color: green;"><strong>Kunci: SELECT</strong></small>
+                        </td>
+                        <td style="text-align: center;">
+                            <div style="display: flex; gap: 8px; justify-content: center;">
+                                <a href="edit.html" class="btn btn-secondary" style="padding: 6px 12px; font-size: 0.8rem;">✏️ Edit</a>
+                                <button onclick="alert('Dihapus!')" class="btn" style="padding: 6px 12px; font-size: 0.8rem; background-color: var(--danger);">🗑️</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;"><strong>2</strong></td>
+                        <td class="test-title-cell">
+                            Apa fungsi dari Primary Key dalam sebuah tabel database?<br>
+                            <small style="color: green;"><strong>Kunci: Mengidentifikasi unik setiap baris</strong></small>
+                        </td>
+                        <td style="text-align: center;">
+                            <div style="display: flex; gap: 8px; justify-content: center;">
+                                <a href="edit.html" class="btn btn-secondary" style="padding: 6px 12px; font-size: 0.8rem;">✏️ Edit</a>
+                                <button onclick="alert('Dihapus!')" class="btn" style="padding: 6px 12px; font-size: 0.8rem; background-color: var(--danger);">🗑️</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;"><strong>3</strong></td>
+                        <td class="test-title-cell">
+                            Perintah untuk menghapus data dari tabel adalah...<br>
+                            <small style="color: green;"><strong>Kunci: DELETE</strong></small>
+                        </td>
+                        <td style="text-align: center;">
+                            <div style="display: flex; gap: 8px; justify-content: center;">
+                                <a href="edit.html" class="btn btn-secondary" style="padding: 6px 12px; font-size: 0.8rem;">✏️ Edit</a>
+                                <button onclick="alert('Dihapus!')" class="btn" style="padding: 6px 12px; font-size: 0.8rem; background-color: var(--danger);">🗑️</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;"><strong>4</strong></td>
+                        <td class="test-title-cell">
+                            Apa kepanjangan dari SQL?<br>
+                            <small style="color: green;"><strong>Kunci: Structured Query Language</strong></small>
+                        </td>
+                        <td style="text-align: center;">
+                            <div style="display: flex; gap: 8px; justify-content: center;">
+                                <a href="edit.html" class="btn btn-secondary" style="padding: 6px 12px; font-size: 0.8rem;">✏️ Edit</a>
+                                <button onclick="alert('Dihapus!')" class="btn" style="padding: 6px 12px; font-size: 0.8rem; background-color: var(--danger);">🗑️</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;"><strong>5</strong></td>
+                        <td class="test-title-cell">
+                            Apa yang dimaksud dengan Foreign Key?<br>
+                            <small style="color: green;"><strong>Kunci: Field yang merujuk ke Primary Key tabel lain</strong></small>
+                        </td>
+                        <td style="text-align: center;">
+                            <div style="display: flex; gap: 8px; justify-content: center;">
+                                <a href="edit.html" class="btn btn-secondary" style="padding: 6px 12px; font-size: 0.8rem;">✏️ Edit</a>
+                                <button onclick="alert('Dihapus!')" class="btn" style="padding: 6px 12px; font-size: 0.8rem; background-color: var(--danger);">🗑️</button>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 FloTest - FUJI</p>
+        </footer>
+    </div>
+</body>
+</html>

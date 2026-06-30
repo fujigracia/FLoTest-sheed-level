@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FloTest - Edit Soal Matematika</title>
+    <link rel="stylesheet" href="../../../assets/css/style.css">
+</head>
+<body class="dashboard-layout">
+
+    <aside class="sidebar">
+        <div class="sidebar-brand">
+            <h2>⚡ Panel Mentor</h2>
+        </div>
+        <nav class="sidebar-menu">
+            <ul>
+                <li><a href="../../dashboard.html">🏠 Dashboard Mentor</a></li>
+                <li><a href="../index.html" class="active">📂 Menu Tests</a></li>
+                <li><a href="../../../index.html" class="logout-link">🚪 Keluar</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <div class="main-wrapper">
+        <main class="content-body">
+            <section class="welcome-banner">
+                <h2>✏️ Edit Soal Matematika</h2>
+                <a href="index.html" class="back-dashboard-btn">&larr; Kembali ke Daftar Soal</a>
+            </section>
+
+            <section class="form-container-box">
+                <form onsubmit="alert('Soal matematika berhasil diperbarui!'); window.location.href='index.html'; return false;">
+                    
+                    <div class="form-group">
+                        <label>Teks Pertanyaan</label>
+                        <input type="text" value="Berapakah hasil dari 15 + 20 x 2?" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Pilihan Opsi A</label>
+                        <input type="text" value="45">
+                    </div>
+                    <div class="form-group">
+                        <label>Pilihan Opsi B</label>
+                        <input type="text" value="55">
+                    </div>
+                    <div class="form-group">
+                        <label>Pilihan Opsi C</label>
+                        <input type="text" value="70">
+                    </div>
+                    <div class="form-group">
+                        <label>Pilihan Opsi D</label>
+                        <input type="text" value="50">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Pilih Kunci Jawaban Benar</label>
+                        <select required>
+                            <option value="A">Opsi A</option>
+                            <option value="B" selected>Opsi B (55)</option>
+                            <option value="C">Opsi C</option>
+                            <option value="D">Opsi D</option>
+                        </select>
+                    </div>
+
+                    <div class="form-button-group">
+                        <button type="submit" class="btn" style="width: 100%; padding: 12px;">💾 Simpan Perubahan</button>
+                    </div>
+                </form>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

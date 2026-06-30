@@ -5,178 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FloTest - Mengerjakan Ujian</title>
     <link rel="stylesheet" href="../assets/css/style.css">
-    <style>
-        /* Styling Tambahan Khusus Halaman Lembar Ujian */
-        .quiz-container {
-            background: #ffffff;
-            border-radius: 8px;
-            padding: 24px;
-            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
-            margin-top: 20px;
-        }
-        .progress-bar-wrapper {
-            background-color: #e2e8f0;
-            border-radius: 9999px;
-            height: 10px;
-            width: 100%;
-            margin: 12px 0 24px 0;
-            overflow: hidden;
-        }
-        .progress-bar-fill {
-            background: #3b82f6;
-            height: 100%;
-            width: 40%; /* Menandakan progres soal ke-4 dari 10 */
-            transition: width 0.3s ease;
-        }
-        .question-text {
-            font-size: 1.15rem;
-            font-weight: 600;
-            color: #1e293b;
-            margin-bottom: 20px;
-            line-height: 1.6;
-        }
-        .options-list {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            margin-bottom: 28px;
-        }
-        .option-item {
-            display: flex;
-            align-items: center;
-            padding: 14px 16px;
-            border: 2px solid #e2e8f0;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: all 0.2s ease;
-        }
-        .option-item:hover {
-            background-color: #f8fafc;
-            border-color: #cbd5e1;
-        }
-        /* Highlight Pilihan Jawaban yang Dipilih (Radio Checked) */
-        .option-item input[type="radio"]:checked + .option-text-wrapper {
-            color: #3b82f6;
-        }
-        .option-item input[type="radio"] {
-            margin-right: 12px;
-            width: 18px;
-            height: 18px;
-            cursor: pointer;
-        }
-        .option-label {
-            font-weight: bold;
-            margin-right: 8px;
-            color: #64748b;
-        }
-        .quiz-navigation-buttons {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-top: 1px solid #e2e8f0;
-            padding-top: 20px;
-        }
-        /* Gaya khusus tombol disabled */
-        .btn:disabled {
-            background-color: #cbd5e1 !important;
-            color: #94a3b8 !important;
-            cursor: not-allowed;
-            opacity: 0.7;
-        }
-    </style>
 </head>
 <body class="dashboard-layout">
 
     <aside class="sidebar">
-        <div class="sidebar-brand">
-            <h2>⚡ Panel Menti</h2>
-        </div>
+        <div class="sidebar-brand"><h2>⚡ Panel Menti</h2></div>
         <nav class="sidebar-menu">
             <ul>
                 <li><a href="dashboard.html">🏠 Dashboard Menti</a></li>
                 <li><a href="dashboard.html" class="active">📝 Menu Take Test</a></li>
-                <li class="menu-separator"></li>
-                <li><a href="../index.html" class="logout-link">🚪 Keluar</a></li>
             </ul>
         </nav>
     </aside>
 
     <div class="main-wrapper">
-        <header class="main-header">
-            <div class="user-profile">
-                <span>Mode Ujian: <strong>Siswa Menti</strong> 📝</span>
-            </div>
-        </header>
-
         <main class="content-body">
             <section class="welcome-banner" style="border-left: 5px solid #3b82f6;">
-                <h2>Ujian: Pemrograman HTML & CSS Dasar</h2>
-                <p>Harap baca soal dengan teliti sebelum menentukan pilihan jawaban akhir Anda.</p>
-                <a href="dashboard.html" class="back-dashboard-btn" style="margin-bottom: 0;">&larr; Keluar & Kembali ke Dashboard</a>
+                <h2 id="judul-ujian">Memuat Ujian...</h2>
+                <p>Harap baca soal dengan teliti.</p>
+                <a href="dashboard.html" class="back-dashboard-btn">&larr; Keluar</a>
             </section>
 
             <div class="quiz-container">
                 <div style="display: flex; justify-content: space-between; align-items: center;">
-                    <span style="font-size: 0.95rem; color: #64748b;">Pertanyaan Nomor <strong>4</strong> dari <strong>10</strong> Soal</span>
-                    <span style="font-size: 0.95rem; font-weight: 600; color: #3b82f6;">Progres: 40%</span>
+                    <span id="nomor-soal" style="font-size: 0.95rem; color: #64748b;">Memuat...</span>
+                    <span id="progres-teks" style="font-size: 0.95rem; font-weight: 600; color: #3b82f6;">0%</span>
                 </div>
                 <div class="progress-bar-wrapper">
-                    <div class="progress-bar-fill"></div>
+                    <div id="progress-bar" class="progress-bar-fill" style="width: 0%;"></div>
                 </div>
 
-                <div class="question-text">
-                    4. Tag HTML manakah yang paling tepat digunakan secara semantik untuk membungkus struktur navigasi utama pada sebuah website?
-                </div>
+                <div id="question-text" class="question-text" style="margin-bottom: 20px;"></div>
 
-                <form action="#" onsubmit="event.preventDefault(); alert('Seluruh lembar jawaban Anda berhasil dikirim ke server mentor!'); window.location.href='dashboard.html';">
-                    <div class="options-list">
-                        <label class="option-item">
-                            <input type="radio" name="answer-option" value="A">
-                            <div class="option-text-wrapper">
-                                <span class="option-label">A.</span> &lt;section&gt;
-                            </div>
-                        </label>
-
-                        <label class="option-item">
-                            <input type="radio" name="answer-option" value="B">
-                            <div class="option-text-wrapper">
-                                <span class="option-label">B.</span> &lt;div class="nav"&gt;
-                            </div>
-                        </label>
-
-                        <label class="option-item">
-                            <input type="radio" name="answer-option" value="C">
-                            <div class="option-text-wrapper">
-                                <span class="option-label">C.</span> &lt;nav&gt;
-                            </div>
-                        </label>
-
-                        <label class="option-item">
-                            <input type="radio" name="answer-option" value="D">
-                            <div class="option-text-wrapper">
-                                <span class="option-label">D.</span> &lt;aside&gt;
-                            </div>
-                        </label>
-                    </div>
-
-                    <div class="quiz-navigation-buttons">
-                        <div>
-                            <button type="button" class="btn btn-secondary" onclick="alert('Kembali ke soal nomor 3')">← Sebelumnya</button>
+                <form id="quiz-form">
+                    <div id="options-list" class="options-list">
                         </div>
-                        
+
+                    <div class="quiz-navigation-buttons" style="margin-top: 20px; display: flex; justify-content: space-between;">
+                        <button type="button" id="btn-prev" class="btn btn-secondary">← Sebelumnya</button>
                         <div style="display: flex; gap: 8px;">
-                            <button type="button" class="btn" style="background-color: #4f46e5;" onclick="alert('Lanjut ke soal nomor 5')">Selanjutnya →</button>
-                            
-                            <button type="submit" class="btn" style="background-color: #16a34a;">🔒 Kirim Ujian</button>
+                            <button type="button" id="btn-next" class="btn" style="background-color: #4f46e5;">Selanjutnya →</button>
+                            <button type="submit" id="btn-submit" class="btn" style="background-color: #16a34a; display:none;">🔒 Kirim Ujian</button>
                         </div>
                     </div>
                 </form>
             </div>
-        </main>
-
-        <footer>
-            <p>&copy; 2026 FloTest - FUJI</p>
-        </footer>
+            </main>
     </div>
+
+    <script src="../assets/js/main.js"></script>
 </body>
 </html>

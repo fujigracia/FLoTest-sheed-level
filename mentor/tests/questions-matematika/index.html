@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FloTest - Kelola Soal Matematika</title>
+    <link rel="stylesheet" href="../../../assets/css/style.css">
+</head>
+<body class="dashboard-layout">
+
+    <aside class="sidebar">
+        <div class="sidebar-brand">
+            <h2>⚡ Panel Mentor</h2>
+        </div>
+        <nav class="sidebar-menu">
+            <ul>
+                <li><a href="../../dashboard.html">🏠 Dashboard Mentor</a></li>
+                <li><a href="../index.html" class="active">📂 Menu Tests</a></li>
+                <li class="menu-separator"></li>
+                <li><a href="../../../index.html" class="logout-link">🚪 Keluar</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <div class="main-wrapper">
+        <header class="main-header">
+            <div class="user-profile">
+                <span>Selamat Datang, <strong>Ahmad Mentor</strong> 👨‍🏫</span>
+            </div>
+        </header>
+
+        <main class="content-body">
+            <section class="welcome-banner">
+                <h2>Bank Soal: Matematika</h2>
+                <p>Kelola soal-soal hitungan, aljabar, dan logika matematika untuk ujian kelas Anda.</p>
+                <a href="../index.html" class="back-dashboard-btn" style="margin-bottom: 0;">&larr; Kembali ke Daftar Kuis</a>
+            </section>
+
+            <div class="info-section">
+                <div class="page-title-section">
+                    <h3>📋 Butir Soal Matematika</h3>
+                    <a href="create.html" class="btn">➕ Tambah Soal</a>
+                </div>
+                
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th style="width: 80px; text-align: center;">Number</th>
+                                <th>Question Text</th>
+                                <th style="width: 200px; text-align: center;">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td style="text-align: center;"><strong>1</strong></td>
+                            <td class="test-title-cell">
+                                Berapakah hasil dari 15 + 20 x 2?<br>
+                                <small style="color: green;"><strong>Kunci: 55</strong></small>
+                            </td>
+                            <td style="text-align: center;">
+                                <div style="display: flex; gap: 8px; justify-content: center;">
+                                    <a href="edit.html" class="btn btn-secondary" style="padding: 6px 12px; font-size: 0.8rem;">✏️ Edit</a>
+                                    <button onclick="alert('Dihapus!')" class="btn" style="padding: 6px 12px; font-size: 0.8rem; background-color: var(--danger);">🗑️</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;"><strong>2</strong></td>
+                            <td class="test-title-cell">
+                                Jika x + 5 = 12, berapakah nilai x?<br>
+                                <small style="color: green;"><strong>Kunci: 7</strong></small>
+                            </td>
+                            <td style="text-align: center;">
+                                <div style="display: flex; gap: 8px; justify-content: center;">
+                                    <a href="edit.html" class="btn btn-secondary" style="padding: 6px 12px; font-size: 0.8rem;">✏️ Edit</a>
+                                    <button onclick="alert('Dihapus!')" class="btn" style="padding: 6px 12px; font-size: 0.8rem; background-color: var(--danger);">🗑️</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;"><strong>3</strong></td>
+                            <td class="test-title-cell">
+                                Hasil dari 2³ + 3² adalah...<br>
+                                <small style="color: green;"><strong>Kunci: 17</strong></small>
+                            </td>
+                            <td style="text-align: center;">
+                                <div style="display: flex; gap: 8px; justify-content: center;">
+                                    <a href="edit.html" class="btn btn-secondary" style="padding: 6px 12px; font-size: 0.8rem;">✏️ Edit</a>
+                                    <button onclick="alert('Dihapus!')" class="btn" style="padding: 6px 12px; font-size: 0.8rem; background-color: var(--danger);">🗑️</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;"><strong>4</strong></td>
+                            <td class="test-title-cell">
+                                Luas persegi panjang dengan panjang 10cm dan lebar 5cm?<br>
+                                <small style="color: green;"><strong>Kunci: 50 cm²</strong></small>
+                            </td>
+                            <td style="text-align: center;">
+                                <div style="display: flex; gap: 8px; justify-content: center;">
+                                    <a href="edit.html" class="btn btn-secondary" style="padding: 6px 12px; font-size: 0.8rem;">✏️ Edit</a>
+                                    <button onclick="alert('Dihapus!')" class="btn" style="padding: 6px 12px; font-size: 0.8rem; background-color: var(--danger);">🗑️</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;"><strong>5</strong></td>
+                            <td class="test-title-cell">
+                                Nilai dari √144 adalah...<br>
+                                <small style="color: green;"><strong>Kunci: 12</strong></small>
+                            </td>
+                            <td style="text-align: center;">
+                                <div style="display: flex; gap: 8px; justify-content: center;">
+                                    <a href="edit.html" class="btn btn-secondary" style="padding: 6px 12px; font-size: 0.8rem;">✏️ Edit</a>
+                                    <button onclick="alert('Dihapus!')" class="btn" style="padding: 6px 12px; font-size: 0.8rem; background-color: var(--danger);">🗑️</button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 FloTest - FUJI</p>
+        </footer>
+    </div>
+</body>
+</html>

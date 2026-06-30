@@ -177,3 +177,70 @@ function escapeHTML(str) {
     }
 }
 
+document.addEventListener("DOMContentLoaded", () => {
+    // 1. Definisikan semua database soal di satu tempat
+    const databaseSoal = {
+        "matematika": {
+            judul: "Matematika",
+            soal: [
+                { q: "Berapakah hasil dari 15 + 20 x 2?", a: ["45", "55", "70", "75"], correct: 1 },
+                { q: "Jika x + 5 = 12, berapakah nilai x?", a: ["5", "6", "7", "8"], correct: 2 },
+                { q: "Hasil dari 2³ + 3² adalah...", a: ["13", "15", "17", "19"], correct: 2 },
+                { q: "Luas persegi panjang dengan panjang 10cm dan lebar 5cm?", a: ["15 cm²", "30 cm²", "50 cm²", "100 cm²"], correct: 2 },
+                { q: "Nilai dari √144 adalah...", a: ["10", "11", "12", "14"], correct: 2 }
+            ]
+        }
+        // Anda bisa menambah mapel lain di sini dengan format yang sama
+    };
+
+    // Cek apakah kita ada di halaman take-test.html
+    if (!document.getElementById('quiz-form')) return;
+
+    // 2. Ambil parameter mapel dari URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const mapel = urlParams.get('mapel'); // Mengambil 'matematika'
+    const data = databaseSoal[mapel];
+
+    if (!data) {
+        document.querySelector('.quiz-container').innerHTML = "<h3>Ujian tidak ditemukan!</h3>";
+        return;
+    }
+
+    // Update judul ujian
+    document.getElementById('judul-ujian').innerText = `Ujian: ${data.judul}`;
+
+    // 3. Logika Menampilkan Soal
+    let indexSoal = 0;
+    const totalSoal = data.soal.length;
+
+    function renderSoal() {
+        const s = data.soal[indexSoal];
+        document.getElementById('nomor-soal').innerHTML = `Pertanyaan Nomor <strong>${indexSoal + 1}</strong> dari ${totalSoal}`;
+        document.getElementById('progres-teks').innerText = `Progres: ${Math.round(((indexSoal + 1) / totalSoal) * 100)}%`;
+        document.getElementById('progress-bar').style.width = `${((indexSoal + 1) / totalSoal) * 100}%`;
+        document.getElementById('question-text').innerText = `${indexSoal + 1}. ${s.q}`;
+
+        let optionsHTML = '';
+        s.a.forEach((opt, i) => {
+            optionsHTML += `
+                <label class="option-item">
+                    <input type="radio" name="jawaban" value="${i}"> ${opt}
+                </label>`;
+        });
+        document.getElementById('options-list').innerHTML = optionsHTML;
+
+        document.getElementById('btn-next').style.display = indexSoal === (totalSoal - 1) ? 'none' : 'block';
+        document.getElementById('btn-submit').style.display = indexSoal === (totalSoal - 1) ? 'block' : 'none';
+    }
+
+    document.getElementById('btn-next').onclick = () => { if(indexSoal < totalSoal - 1) { indexSoal++; renderSoal(); } };
+    document.getElementById('btn-prev').onclick = () => { if(indexSoal > 0) { indexSoal--; renderSoal(); } };
+
+    document.getElementById('quiz-form').onsubmit = (e) => {
+        e.preventDefault();
+        alert('Ujian selesai! Jawaban Anda telah tersimpan.');
+        window.location.href = 'dashboard.html';
+    };
+
+    renderSoal();
+});

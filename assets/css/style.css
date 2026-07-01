@@ -113,12 +113,24 @@ body.login-page-layout {
     z-index: 100; 
 }
 
-.main-wrapper { 
-    flex: 1; 
-    margin-left: 260px; 
-    display: flex; 
-    flex-direction: column; 
-    min-height: 100vh; 
+/* Ganti CSS .main-wrapper Anda dengan ini */
+.main-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column; /* PENTING: Ubah ke column agar konten berderet ke bawah */
+    align-items: center;    /* Pusatkan secara horizontal */
+    padding: 40px;
+    background-color: #f8fafc;
+    min-height: 100vh;
+    box-sizing: border-box;
+    margin-left: 260px;     /* Sesuaikan dengan lebar sidebar */
+}
+/* Tambahkan ini agar konten body memiliki ruang */
+.content-body {
+    width: 100%;
+    max-width: 800px; /* Sesuaikan lebar yang nyaman */
+    margin: 0 auto;
+    flex: 1;
 }
 
 .main-header { 
@@ -506,11 +518,18 @@ table tr:last-child td { border-bottom: none; }
 }
 
 .question-text {
+    font-size: 1.25rem;
     font-weight: 600;
-    margin-bottom: 4px;
-    color: #334155;
+    color: #1e293b;
+    margin-bottom: 25px;
+    
+    /* Properti krusial untuk mencegah teks keluar kotak */
+    word-wrap: break-word;     
+    word-break: break-word;    
+    white-space: normal;       /* Memastikan teks bisa pindah baris */
+    line-height: 1.5;          /* Memberi ruang antar baris agar tidak bertumpuk */
+    display: block;            /* Memastikan elemen bersifat block */
 }
-
 .correct-answer-text {
     font-size: 0.85rem;
     color: #059669;
@@ -567,3 +586,271 @@ table tr:last-child td { border-bottom: none; }
     cursor: pointer;
 }
 .btn-submit:hover { background-color: #1d4ed8; }
+
+/* Sembunyikan semua konten tab secara default */
+.tab-content-section {
+    display: none;
+}
+
+/* Tampilkan konten yang ID-nya cocok dengan radio button yang dicentang */
+#tab-dashboard:checked ~ .main-wrapper #content-dashboard,
+#tab-menti:checked ~ .main-wrapper #content-menti,
+#tab-tes:checked ~ .main-wrapper #content-tes,
+#tab-mentor:checked ~ .main-wrapper #content-mentor {
+    display: block;
+}
+
+/* Sembunyikan radio button agar tidak terlihat */
+.tab-switch {
+    display: none;
+}
+
+/* Perbaikan untuk container soal */
+.quiz-container {
+    width: 100%;
+    max-width: 800px;       /* Berikan ruang lebih lebar */
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    box-sizing: border-box; /* Mencegah padding keluar dari lebar */
+}
+/* Pastikan judul soal punya ruang */
+.quiz-container h2, .quiz-container .question-text {
+    line-height: 1.4;
+    margin-bottom: 20px;
+    word-wrap: break-word; /* Mencegah teks keluar kotak */
+}
+/* Layout Pilihan Jawaban (4 Pilihan) */
+.options {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2x2 grid */
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.options label {
+    display: block;
+    padding: 12px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* Navigasi Buttons */
+.quiz-navigation-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.right-buttons { display: flex; gap: 10px; }
+
+/* Gaya Tombol */
+.btn {
+    padding: 10px 20px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-weight: 600;
+    background-color: #4f46e5;
+}
+
+.btn-secondary { background-color: #64748b; }
+
+/* Tombol yang belum aktif (disabled) */
+.btn:disabled, .btn-secondary:disabled {
+    background-color: #cbd5e1;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+/* Container Navigasi Utama */
+.quiz-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.left-nav {
+    display: flex;
+    gap: 10px; /* Jarak antara Sebelumnya dan Selanjutnya */
+}
+
+/* Styling Dasar Tombol */
+.btn {
+    padding: 10px 20px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+/* Warna-warna */
+.btn-secondary { background: #e2e8f0; color: #64748b; }
+.btn-primary { background: #e2e8f0; color: #64748b; }
+.btn-submit { background: #16a34a; color: white; }
+
+/* Menangani tombol disabled */
+button:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+/* Agar Pilihan Jawaban terlihat bagus (kotak) */
+.options-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsif otomatis */
+    gap: 15px;
+    margin: 25px 0;
+    width: 100%;
+}
+
+.opt {
+    border: 1px solid #e2e8f0;
+    padding: 15px;
+    border-radius: 8px;
+    display: block;
+}
+
+/* 1. Memusatkan Seluruh Konten */
+.main-wrapper {
+    display: flex;
+    justify-content: center; /* Pindahkan ke tengah horizontal */
+    width: 100%;
+    padding: 40px;
+}
+
+.quiz-container {
+    width: 100%;
+    max-width: 700px; /* Batasi lebar agar tidak terlalu lebar */
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* 2. Grid untuk 4 Pilihan */
+.options-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin: 25px 0;
+}
+
+.opt {
+    border: 1px solid #e2e8f0;
+    padding: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* 3. Posisi Tombol Navigasi */
+.quiz-navigation {
+    display: flex;
+    justify-content: space-between; /* Kiri dan Kanan */
+    align-items: center;
+    margin-top: 30px;
+}
+
+.left-nav { display: flex; gap: 10px; }
+
+/* Styling Tombol */
+.btn { padding: 10px 20px; border-radius: 8px; border: none; cursor: pointer; font-weight: 600; }
+.btn-secondary { background: #e2e8f0; color: #64748b; }
+.btn-submit { background: #16a34a; color: white; }
+
+/* Tombol disabled abu-abu */
+button:disabled { opacity: 0.5; cursor: not-allowed; }
+
+/* 1. Pastikan body dan html penuh 100% */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* 2. Layout utama harus menggunakan display flex */
+.dashboard-layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* 3. INI BAGIAN UTAMA YANG MEMUSATKAN KONTEN */
+.main-wrapper {
+    flex: 1; /* Mengisi sisa ruang di sebelah sidebar */
+    display: flex; /* Aktifkan flexbox */
+    justify-content: center; /* PUSATKAN HORIZONTAL */
+    align-items: center; /* PUSATKAN VERTIKAL */
+    padding: 20px;
+    background-color: #f8fafc;
+}
+
+/* 4. Kontainer soal */
+.quiz-container {
+    width: 100%;
+    max-width: 650px; /* Lebar maksimal */
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08); /* Bayangan soft */
+}
+
+/* Pastikan layout utama fleksibel */
+.dashboard-layout {
+    display: flex;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Memaksa konten di tengah */
+.main-wrapper {
+    flex: 1; /* Mengisi ruang sisa di kanan sidebar */
+    display: flex;
+    justify-content: center; /* PUSAT HORIZONTAL */
+    align-items: center;     /* PUSAT VERTIKAL */
+    padding: 20px;
+    background-color: #f8fafc;
+}
+
+/* Kotak soal */
+.quiz-container {
+    width: 100%;
+    max-width: 600px;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* Navigasi */
+.quiz-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.left-nav { display: flex; gap: 10px; }
+
+/* Tombol */
+.btn { padding: 10px 20px; border-radius: 8px; border: none; cursor: pointer; font-weight: 600; }
+.btn-secondary { background: #e2e8f0; color: #64748b; }
+.btn-submit { background: #16a34a; color: white; }
+button:disabled { opacity: 0.5; cursor: not-allowed; }
+
+/* Grid Jawaban */
+.options-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin: 20px 0;
+}
+.opt { border: 1px solid #e2e8f0; padding: 12px; border-radius: 8px; }
+
+.btn-submit {
+    position: relative;
+    z-index: 100; /* Memaksa tombol berada di lapisan paling atas */
+}

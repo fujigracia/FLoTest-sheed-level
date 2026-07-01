@@ -19,43 +19,26 @@
                 <p>Silakan lengkapi data di bawah untuk masuk ke sistem</p>
             </div>
 
-            <form action="#" class="form-login" onsubmit="event.preventDefault();">
+            <form action="#" class="form-login">
                 
                 <div class="form-group form-group-email">
                     <label for="email">Alamat Email</label>
-                    <input 
-                        type="email" 
-                        id="email" 
-                        class="input-login" 
-                        placeholder="" 
-                        required
-                    >
+                    <input type="email" id="email" class="input-login" placeholder="Email Anda" required>
                 </div>
 
                 <div class="form-group form-group-password">
                     <label for="password">Kata Sandi</label>
-                    <input 
-                        type="password" 
-                        id="password" 
-                        class="input-login" 
-                        placeholder="" 
-                        required
-                    >
+                    <input type="password" id="password" class="input-login" placeholder="Password Anda" required>
                 </div>
                         
-            <div class="form-group role-buttons">
-                <p class="hint-text">LOGIN SEBAGAI: </p>
-
-            <div class="role-list">
-                <a href="admin/dashboard.html" class="role-link">Admin</a>
-                <a href="mentor/dashboard.html" class="role-link">Mentor</a>
-                <a href="menti/dashboard.html" class="role-link">Menti</a>
-            </div>
-            </div>
-
-                    </details>
+                <div class="form-group role-buttons">
+                    <p class="hint-text">LOGIN SEBAGAI: </p>
+                    <div class="role-list">
+                        <a href="admin/dashboard.html" class="role-link">Admin</a>
+                        <a href="mentor/dashboard.html" class="role-link">Mentor</a>
+                        <a href="menti/dashboard.html" class="role-link">Menti</a>
+                    </div>
                 </div>
-
             </form>
 
             <footer class="login-footer">
@@ -65,6 +48,5 @@
         </main>
     </div>
 
-    <script src="assets/js/main.js"></script>
 </body>
 </html>

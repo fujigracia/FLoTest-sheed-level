@@ -18,41 +18,31 @@
         </nav>
     </aside>
 
-    <div class="main-wrapper">
-        <main class="content-body">
-            <section class="welcome-banner" style="border-left: 5px solid #3b82f6;">
-                <h2 id="judul-ujian">Memuat Ujian...</h2>
-                <p>Harap baca soal dengan teliti.</p>
-                <a href="dashboard.html" class="back-dashboard-btn">&larr; Keluar</a>
-            </section>
-
-            <div class="quiz-container">
-                <div style="display: flex; justify-content: space-between; align-items: center;">
-                    <span id="nomor-soal" style="font-size: 0.95rem; color: #64748b;">Memuat...</span>
-                    <span id="progres-teks" style="font-size: 0.95rem; font-weight: 600; color: #3b82f6;">0%</span>
-                </div>
-                <div class="progress-bar-wrapper">
-                    <div id="progress-bar" class="progress-bar-fill" style="width: 0%;"></div>
+    <main class="main-wrapper">
+    <div class="quiz-container">
+        <form action="dashboard.html" method="GET">
+            <div id="soal1" class="soal-box">
+                <p><strong>1. 15 + 20 x 2 = ?</strong></p>
+                <div class="options-grid">
+                    <label class="opt"> <input type="radio" name="s1" value="55"> 55</label>
+                    <label class="opt"> <input type="radio" name="s1" value="60"> 60</label>
+                    <label class="opt"> <input type="radio" name="s1" value="70"> 70</label>
+                    <label class="opt"> <input type="radio" name="s1" value="80"> 80</label>
                 </div>
 
-                <div id="question-text" class="question-text" style="margin-bottom: 20px;"></div>
-
-                <form id="quiz-form">
-                    <div id="options-list" class="options-list">
-                        </div>
-
-                    <div class="quiz-navigation-buttons" style="margin-top: 20px; display: flex; justify-content: space-between;">
-                        <button type="button" id="btn-prev" class="btn btn-secondary">← Sebelumnya</button>
-                        <div style="display: flex; gap: 8px;">
-                            <button type="button" id="btn-next" class="btn" style="background-color: #4f46e5;">Selanjutnya →</button>
-                            <button type="submit" id="btn-submit" class="btn" style="background-color: #16a34a; display:none;">🔒 Kirim Ujian</button>
-                        </div>
+                <div class="quiz-navigation">
+                    <div class="left-nav">
+                        <button type="button" class="btn btn-secondary" disabled>← Sebelumnya</button>
+                        <button type="button" class="btn btn-secondary" disabled>Selanjutnya →</button>
                     </div>
-                </form>
+                    <div class="right-nav">
+                        <button type="submit" class="btn btn-submit">Submit Ujian</button>
+                    </div>
+                </div>
             </div>
-            </main>
+        </form>
     </div>
+</main>
 
-    <script src="../assets/js/main.js"></script>
 </body>
 </html>
